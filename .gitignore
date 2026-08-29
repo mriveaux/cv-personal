@@ -10,3 +10,6 @@ yarn-error.log*
 .pnp.js
 
 .vscode/*
+
+/dist
+/.astro

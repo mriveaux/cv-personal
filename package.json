@@ -4,9 +4,15 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@astrojs/tailwind": "^6.0.2",
+    "astro": "^7.2.9",
+    "tailwindcss": "^3.4.19"
+  },
   "devDependencies": {
     "typescript": "^6.0.3"
   },
