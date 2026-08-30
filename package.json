@@ -2,7 +2,7 @@
   "name": "cv-personal",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/index.js",
+  "packageManager": "pnpm@9.0.0",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",

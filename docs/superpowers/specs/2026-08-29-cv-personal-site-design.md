@@ -58,6 +58,12 @@ el repo estático de 2021 (`mriveaux/mdriveaux-profile`).
 
 - i18n nativo de Astro. `defaultLocale: "es"`, `locales: ["es","en","ca","pt","fr","de"]`,
   `prefixDefaultLocale: false` → rutas: `/`, `/en/`, `/ca/`, `/pt/`, `/fr/`, `/de/`.
+  > Nota (post-implementación): en la implementación final este enrutamiento se
+  > resolvió a mano (`src/i18n/langs.ts` + `src/pages/[lang]/index.astro` +
+  > `src/pages/index.astro`) en lugar de usar las opciones nativas de i18n de
+  > Astro en `astro.config.mjs`. Las URLs resultantes son idénticas a las
+  > especificadas, pero helpers nativos como `Astro.currentLocale` no están
+  > disponibles en este código.
 - Selector de idioma en el header, visible en todas las páginas.
 
 ## Páginas / componentes
