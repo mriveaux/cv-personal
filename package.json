@@ -7,7 +7,11 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "test": "vitest run"
+    "test": "vitest run",
+    "deploy": "astro build && wrangler deploy",
+    "release:patch": "pnpm version patch && git push --follow-tags && pnpm run deploy",
+    "release:minor": "pnpm version minor && git push --follow-tags && pnpm run deploy",
+    "release:major": "pnpm version major && git push --follow-tags && pnpm run deploy"
   },
   "dependencies": {
     "@astrojs/tailwind": "^6.0.2",
@@ -18,7 +22,8 @@
   "devDependencies": {
     "sharp": "^0.35.4",
     "typescript": "^6.0.3",
-    "vitest": "^4.1.11"
+    "vitest": "^4.1.11",
+    "wrangler": "^4.127.1"
   },
   "private": true
 }
