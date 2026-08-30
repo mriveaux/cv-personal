@@ -1,6 +1,8 @@
 ---
 import { getEntry } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { SITE_URL } from '../site';
+import { getLocalizedPath } from '../i18n/langs';
 import Header from './Header.astro';
 import Hero from './Hero.astro';
 import About from './About.astro';
@@ -26,8 +28,32 @@ if (!entry) {
   throw new Error(`Missing CV content for locale "${lang}"`);
 }
 const cv = entry.data;
+
+const OG_LOCALES: Record<Lang, string> = {
+  es: 'es_ES',
+  en: 'en_US',
+  ca: 'ca_ES',
+  pt: 'pt_PT',
+  fr: 'fr_FR',
+  de: 'de_DE',
+};
+
+function truncate(text: string, maxLength: number): string {
+  if (text.length <= maxLength) return text;
+  return `${text.slice(0, maxLength - 1).trimEnd()}…`;
+}
+
+const description = truncate(cv.about, 160);
+const canonicalUrl = `${SITE_URL}${getLocalizedPath(lang)}`;
+const ogLocale = OG_LOCALES[lang];
 ---
-<BaseLayout lang={lang} title={`${cv.hero.name} — ${cv.hero.title}`}>
+<BaseLayout
+  lang={lang}
+  title={`${cv.hero.name} — ${cv.hero.title}`}
+  description={description}
+  canonicalUrl={canonicalUrl}
+  ogLocale={ogLocale}
+>
   <Header lang={lang} ui={cv.ui} name={cv.hero.name} />
   <Hero hero={cv.hero} />
   <About title={cv.ui.sectionTitles.about} about={cv.about} />
