@@ -1,0 +1,96 @@
+{
+  "hero": {
+    "name": "Miguel Díaz Riveaux",
+    "title": "Software Engineer",
+    "location": "Madrid, Espanha"
+  },
+  "about": "Com mais de uma década de experiência no setor tecnológico, especializo-me no desenvolvimento de software sob medida que impulsiona a eficiência operacional. Liderei projetos de implementação de sistemas de gestão (ERP, CRM), bem como o desenvolvimento de plataformas web, obtendo sempre resultados alinhados aos objetivos do cliente. Minha abordagem autodidata e meu compromisso com a melhoria contínua me permitiram manter-me atualizado com as últimas tendências tecnológicas. Durante mais de 5 anos como freelancer em Cuba, colaborei com empresas locais para digitalizar processos-chave em áreas como contabilidade, estoque, logística e recursos humanos. Acredito firmemente no trabalho em equipe, na disciplina técnica e na entrega de valor real em cada projeto.",
+  "experience": [
+    {
+      "company": "Flexibleplaces",
+      "role": "Software Developer",
+      "period": "Janeiro 2024 – Atualidade",
+      "location": "Madrid, Espanha (híbrido)",
+      "highlights": ["Desenvolvimento da plataforma de gestão de espaços e reservas da Flexibleplaces."]
+    },
+    {
+      "company": "Flexibleplaces",
+      "role": "Software Developer (freelance)",
+      "period": "Junho 2022 – Janeiro 2024",
+      "location": "Remoto",
+      "highlights": ["Colaboração remota como desenvolvedor independente antes de ingressar em tempo integral."]
+    },
+    {
+      "company": "Desoft",
+      "role": "Senior Software Developer — Especialista B em Ciências Informáticas",
+      "period": "Setembro 2017 – Janeiro 2024",
+      "location": "Havana, Cuba",
+      "highlights": [
+        "Desenvolvedor de software, Gestor de Configuração e Chefe do Comitê de Arquitetura.",
+        "Sistema de Controle de Bens Patrimoniais para o Escritório do Historiador de Havana.",
+        "Sites para Pesca Caribe, Registro Central Comercial de Cuba (RCC), UPTCER e ANTEX."
+      ]
+    },
+    {
+      "company": "GESICU (Grupo Especializado em Serviços Informáticos)",
+      "role": "CEO e Freelance Software Engineer",
+      "period": "Fevereiro 2016 – Novembro 2022",
+      "location": "Cuba",
+      "highlights": [
+        "Análise, design, modelagem e implementação de software para pessoas físicas e jurídicas em Cuba.",
+        "Criador do Future Framework, plataforma web modular para soluções de gestão sob medida, registrada no CENDA."
+      ]
+    },
+    {
+      "company": "Nemexo",
+      "role": "Software Developer (meio período)",
+      "period": "Março 2020 – Julho 2021",
+      "location": "Havana, Cuba",
+      "highlights": ["Desenvolvimento de soluções para melhoria de processos de negócio."]
+    },
+    {
+      "company": "XETID",
+      "role": "Full Stack Developer",
+      "period": "Agosto 2012 – Agosto 2016",
+      "location": "Cuba",
+      "highlights": [
+        "Analista, arquiteto e desenvolvedor do ERP DISTRA (gestão contábil-financeira).",
+        "Secretário do Comitê de Arquitetura."
+      ]
+    }
+  ],
+  "featuredProjects": [
+    { "name": "Future Framework", "description": "Plataforma web modular, multiusuário e multientidade para o desenvolvimento de soluções de gestão sob medida (estrutura organizacional, RH, faturamento, produção, frota de veículos).", "url": "https://gesicu.wordpress.com" },
+    { "name": "CMI Perdurit", "description": "Balanced Scorecard para a Empresa de Fibrocimento Perdurit: alinha a estratégia da empresa com relatórios consolidados e detalhados em tempo real.", "url": "" },
+    { "name": "Sistema de gestão Cooperativa TaxiRutero2", "description": "Gestão da frota de veículos, capital humano, expedições e faturamento para uma cooperativa de transporte em Havana.", "url": "" },
+    { "name": "SERVELEC", "description": "Site para a cooperativa SERVELEC, especializada em reparo e manutenção de sistemas de pesagem e industriais.", "url": "https://www.servelec.cu" },
+    { "name": "FutureTrans", "description": "Software para controle de processos de transporte, construído sobre o Future Framework.", "url": "" }
+  ],
+  "skills": {
+    "categories": [
+      { "name": "Linguagens e frameworks", "items": ["Java & Spring", "C#", "PHP", "JavaScript/TypeScript", "HTML/CSS", "ASP.NET MVC", "Vue.js", "Angular"] },
+      { "name": "Dados", "items": ["SQL", "PL/pgSQL & GIS"] },
+      { "name": "Ferramentas e tecnologias", "items": ["Git", "AWS", "Firebase", "ExtJS", "jQuery", "WordPress", "Doctrine", "Symfony/Laravel", "Bootstrap/TailwindCSS"] },
+      { "name": "Metodologias", "items": ["Scrum", "Liderança de equipes de desenvolvimento", "Gestão de projetos", "Análise e arquitetura de software"] }
+    ]
+  },
+  "education": [
+    { "institution": "Universidad de las Ciencias Informáticas (UCI)", "degree": "Engenheiro em Ciências Informáticas", "period": "2007 – 2012" }
+  ],
+  "languages": [
+    { "name": "Espanhol", "level": "Nativo" },
+    { "name": "Inglês", "level": "C1" },
+    { "name": "Francês", "level": "B1" }
+  ],
+  "contact": {
+    "email": "mdriveaux2015@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/mdriveaux",
+    "github": "https://github.com/mriveaux",
+    "stackoverflow": "https://stackoverflow.com/users/11870089/miguel-díaz-riveaux"
+  },
+  "ui": {
+    "nav": { "about": "Sobre", "experience": "Experiência", "projects": "Projetos", "skills": "Habilidades", "education": "Educação", "languages": "Idiomas", "contact": "Contato" },
+    "downloadCta": "Baixar CV",
+    "sectionTitles": { "about": "Sobre", "experience": "Experiência", "projects": "Projetos em destaque", "skills": "Habilidades", "education": "Educação", "languages": "Idiomas", "contact": "Contato" }
+  }
+}
