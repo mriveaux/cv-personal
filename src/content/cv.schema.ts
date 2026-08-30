@@ -30,12 +30,35 @@ const languageEntry = z.object({
   level: z.string(),
 });
 
+const certificationEntry = z.object({
+  name: z.string(),
+  issuer: z.string(),
+  date: z.string(),
+});
+
+const patentEntry = z.object({
+  title: z.string(),
+  registry: z.string(),
+  number: z.string(),
+  date: z.string(),
+  authors: z.array(z.string()),
+});
+
+const courseEntry = z.object({
+  name: z.string(),
+  provider: z.string(),
+  year: z.string(),
+});
+
 const navLabels = z.object({
   about: z.string(),
   experience: z.string(),
   projects: z.string(),
   skills: z.string(),
   education: z.string(),
+  certifications: z.string(),
+  patents: z.string(),
+  courses: z.string(),
   languages: z.string(),
   contact: z.string(),
 });
@@ -53,6 +76,9 @@ export const cvSchema = z.object({
     categories: z.array(skillCategory),
   }),
   education: z.array(educationEntry),
+  certifications: z.array(certificationEntry),
+  patents: z.array(patentEntry),
+  courses: z.array(courseEntry),
   languages: z.array(languageEntry),
   contact: z.object({
     email: z.string(),
@@ -64,6 +90,7 @@ export const cvSchema = z.object({
     nav: navLabels,
     downloadCta: z.string(),
     sectionTitles: navLabels,
+    toggleTheme: z.string(),
   }),
 });
 

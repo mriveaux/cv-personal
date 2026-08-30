@@ -9,11 +9,14 @@ interface Props {
 const { title, items } = Astro.props;
 ---
 <section id="education" class="mx-auto max-w-2xl px-6 py-10">
-  <h2 class="mb-4 text-2xl font-semibold">{title}</h2>
+  <h2 class="mb-4 flex items-center gap-3 text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-100">
+    <span class="h-6 w-1 rounded-full bg-gradient-to-b from-indigo-500 to-violet-500"></span>
+    {title}
+  </h2>
   {items.map((edu) => (
     <div class="mb-2">
-      <p class="font-semibold">{edu.degree}</p>
-      <p class="text-slate-600">{edu.institution} · {edu.period}</p>
+      <p class="font-semibold text-slate-900 dark:text-slate-100">{edu.degree}</p>
+      <p class="text-slate-600 dark:text-slate-400">{edu.institution} · {edu.period}</p>
     </div>
   ))}
 </section>

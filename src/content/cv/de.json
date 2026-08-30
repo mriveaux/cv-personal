@@ -77,6 +77,25 @@
   "education": [
     { "institution": "Universidad de las Ciencias Informáticas (UCI)", "degree": "Ingenieur für Informatik", "period": "2007 – 2012" }
   ],
+  "certifications": [
+    { "name": "Claude Code 101", "issuer": "Claude Academy", "date": "30. August 2026" }
+  ],
+  "patents": [
+    {
+      "title": "Future Framework",
+      "registry": "Registro Facultativo de Obras Protegidas y de Actos y Contratos referidos al Derecho de Autor (CENDA)",
+      "number": "CU 2023-06-2017",
+      "date": "29. Juni 2017",
+      "authors": ["Miguel Díaz Riveaux", "Adolfo de la Paz Machín"]
+    }
+  ],
+  "courses": [
+    { "name": "Erstellung von Websites in der Cloud mit HTML5/CSS3/Bootstrap", "provider": "Desoft", "year": "2017" },
+    { "name": "Geschäftsprozessmanagement und -mining", "provider": "GESICU", "year": "2016" },
+    { "name": "Räumliche Datenbanken mit Open-Source-Technologien", "provider": "GESICU", "year": "2016" },
+    { "name": "Fortgeschrittene Linux-Administration", "provider": "GESICU", "year": "2017" },
+    { "name": "Finanzbuchhaltung", "provider": "XETID", "year": "2014" }
+  ],
   "languages": [
     { "name": "Spanisch", "level": "Muttersprache" },
     { "name": "Englisch", "level": "C1" },
@@ -89,8 +108,9 @@
     "stackoverflow": "https://stackoverflow.com/users/11870089/miguel-díaz-riveaux"
   },
   "ui": {
-    "nav": { "about": "Über mich", "experience": "Erfahrung", "projects": "Projekte", "skills": "Fähigkeiten", "education": "Ausbildung", "languages": "Sprachen", "contact": "Kontakt" },
+    "nav": { "about": "Über mich", "experience": "Erfahrung", "projects": "Projekte", "skills": "Fähigkeiten", "education": "Ausbildung", "certifications": "Zertifizierungen", "patents": "Patente", "courses": "Kurse", "languages": "Sprachen", "contact": "Kontakt" },
     "downloadCta": "Lebenslauf herunterladen",
-    "sectionTitles": { "about": "Über mich", "experience": "Erfahrung", "projects": "Ausgewählte Projekte", "skills": "Fähigkeiten", "education": "Ausbildung", "languages": "Sprachen", "contact": "Kontakt" }
+    "toggleTheme": "Thema wechseln",
+    "sectionTitles": { "about": "Über mich", "experience": "Erfahrung", "projects": "Ausgewählte Projekte", "skills": "Fähigkeiten", "education": "Ausbildung", "certifications": "Zertifizierungen", "patents": "Patente", "courses": "Kurse", "languages": "Sprachen", "contact": "Kontakt" }
   }
 }

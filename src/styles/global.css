@@ -7,8 +7,14 @@
     display: none !important;
   }
 
+  html.dark {
+    color-scheme: light;
+  }
+
   body {
     font-size: 11pt;
+    background: white !important;
+    color: black !important;
   }
 
   section {

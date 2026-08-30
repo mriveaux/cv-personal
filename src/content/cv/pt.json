@@ -77,6 +77,25 @@
   "education": [
     { "institution": "Universidad de las Ciencias Informáticas (UCI)", "degree": "Engenheiro em Ciências Informáticas", "period": "2007 – 2012" }
   ],
+  "certifications": [
+    { "name": "Claude Code 101", "issuer": "Claude Academy", "date": "30 de agosto de 2026" }
+  ],
+  "patents": [
+    {
+      "title": "Future Framework",
+      "registry": "Registro Facultativo de Obras Protegidas y de Actos y Contratos referidos al Derecho de Autor (CENDA)",
+      "number": "CU 2023-06-2017",
+      "date": "29 jun. 2017",
+      "authors": ["Miguel Díaz Riveaux", "Adolfo de la Paz Machín"]
+    }
+  ],
+  "courses": [
+    { "name": "Criação de sites na nuvem com HTML5/CSS3/Bootstrap", "provider": "Desoft", "year": "2017" },
+    { "name": "Gestão e mineração de processos de negócio", "provider": "GESICU", "year": "2016" },
+    { "name": "Bancos de dados espaciais com tecnologias de código aberto", "provider": "GESICU", "year": "2016" },
+    { "name": "Administração avançada em Linux", "provider": "GESICU", "year": "2017" },
+    { "name": "Contabilidade financeira", "provider": "XETID", "year": "2014" }
+  ],
   "languages": [
     { "name": "Espanhol", "level": "Nativo" },
     { "name": "Inglês", "level": "C1" },
@@ -89,8 +108,9 @@
     "stackoverflow": "https://stackoverflow.com/users/11870089/miguel-díaz-riveaux"
   },
   "ui": {
-    "nav": { "about": "Sobre", "experience": "Experiência", "projects": "Projetos", "skills": "Habilidades", "education": "Educação", "languages": "Idiomas", "contact": "Contato" },
+    "nav": { "about": "Sobre", "experience": "Experiência", "projects": "Projetos", "skills": "Habilidades", "education": "Educação", "certifications": "Certificações", "patents": "Patentes", "courses": "Cursos", "languages": "Idiomas", "contact": "Contato" },
     "downloadCta": "Baixar CV",
-    "sectionTitles": { "about": "Sobre", "experience": "Experiência", "projects": "Projetos em destaque", "skills": "Habilidades", "education": "Educação", "languages": "Idiomas", "contact": "Contato" }
+    "toggleTheme": "Alternar tema",
+    "sectionTitles": { "about": "Sobre", "experience": "Experiência", "projects": "Projetos em destaque", "skills": "Habilidades", "education": "Educação", "certifications": "Certificações", "patents": "Patentes", "courses": "Cursos", "languages": "Idiomas", "contact": "Contato" }
   }
 }

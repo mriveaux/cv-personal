@@ -16,6 +16,7 @@
     "zod": "^4.5.2"
   },
   "devDependencies": {
+    "sharp": "^0.35.4",
     "typescript": "^6.0.3",
     "vitest": "^4.1.11"
   },

@@ -3,19 +3,20 @@ import type { CvData } from '../content/cv.schema';
 
 interface Props {
   title: string;
-  items: CvData['languages'];
+  items: CvData['certifications'];
 }
 
 const { title, items } = Astro.props;
 ---
-<section id="languages" class="mx-auto max-w-2xl px-6 py-10">
+<section id="certifications" class="mx-auto max-w-2xl px-6 py-10">
   <h2 class="mb-4 flex items-center gap-3 text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-100">
     <span class="h-6 w-1 rounded-full bg-gradient-to-b from-indigo-500 to-violet-500"></span>
     {title}
   </h2>
-  <ul class="flex flex-wrap gap-4">
-    {items.map((language) => (
-      <li class="text-slate-700 dark:text-slate-300"><span class="font-semibold text-slate-900 dark:text-slate-100">{language.name}:</span> {language.level}</li>
-    ))}
-  </ul>
+  {items.map((cert) => (
+    <div class="mb-2">
+      <p class="font-semibold text-slate-900 dark:text-slate-100">{cert.name}</p>
+      <p class="text-slate-600 dark:text-slate-400">{cert.issuer} · {cert.date}</p>
+    </div>
+  ))}
 </section>

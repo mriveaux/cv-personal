@@ -8,6 +8,9 @@ import Experience from './Experience.astro';
 import Projects from './Projects.astro';
 import Skills from './Skills.astro';
 import Education from './Education.astro';
+import Certifications from './Certifications.astro';
+import Courses from './Courses.astro';
+import Patents from './Patents.astro';
 import Languages from './Languages.astro';
 import Contact from './Contact.astro';
 import Footer from './Footer.astro';
@@ -32,6 +35,9 @@ const cv = entry.data;
   <Projects title={cv.ui.sectionTitles.projects} items={cv.featuredProjects} />
   <Skills title={cv.ui.sectionTitles.skills} skills={cv.skills} />
   <Education title={cv.ui.sectionTitles.education} items={cv.education} />
+  <Certifications title={cv.ui.sectionTitles.certifications} items={cv.certifications} />
+  <Courses title={cv.ui.sectionTitles.courses} items={cv.courses} />
+  <Patents title={cv.ui.sectionTitles.patents} items={cv.patents} />
   <Languages title={cv.ui.sectionTitles.languages} items={cv.languages} />
   <Contact title={cv.ui.sectionTitles.contact} contact={cv.contact} />
   <Footer name={cv.hero.name} />

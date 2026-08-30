@@ -77,6 +77,25 @@
   "education": [
     { "institution": "Universidad de las Ciencias Informáticas (UCI)", "degree": "Ingeniero en Ciencias Informáticas", "period": "2007 – 2012" }
   ],
+  "certifications": [
+    { "name": "Claude Code 101", "issuer": "Claude Academy", "date": "30 de agosto de 2026" }
+  ],
+  "patents": [
+    {
+      "title": "Future Framework",
+      "registry": "Registro Facultativo de Obras Protegidas y de Actos y Contratos referidos al Derecho de Autor (CENDA)",
+      "number": "CU 2023-06-2017",
+      "date": "29 jun. 2017",
+      "authors": ["Miguel Díaz Riveaux", "Adolfo de la Paz Machín"]
+    }
+  ],
+  "courses": [
+    { "name": "Creación de sitios web en la nube con HTML5/CSS3/Bootstrap", "provider": "Desoft", "year": "2017" },
+    { "name": "Gestión y minería de procesos de negocio", "provider": "GESICU", "year": "2016" },
+    { "name": "Bases de datos espaciales con tecnologías de código abierto", "provider": "GESICU", "year": "2016" },
+    { "name": "Administración avanzada en Linux", "provider": "GESICU", "year": "2017" },
+    { "name": "Contabilidad financiera", "provider": "XETID", "year": "2014" }
+  ],
   "languages": [
     { "name": "Español", "level": "Nativo" },
     { "name": "Inglés", "level": "C1" },
@@ -89,8 +108,9 @@
     "stackoverflow": "https://stackoverflow.com/users/11870089/miguel-díaz-riveaux"
   },
   "ui": {
-    "nav": { "about": "Acerca de", "experience": "Experiencia", "projects": "Proyectos", "skills": "Habilidades", "education": "Educación", "languages": "Idiomas", "contact": "Contacto" },
+    "nav": { "about": "Acerca de", "experience": "Experiencia", "projects": "Proyectos", "skills": "Habilidades", "education": "Educación", "certifications": "Certificaciones", "patents": "Patentes", "courses": "Cursos", "languages": "Idiomas", "contact": "Contacto" },
     "downloadCta": "Descargar CV",
-    "sectionTitles": { "about": "Acerca de", "experience": "Experiencia", "projects": "Proyectos destacados", "skills": "Habilidades", "education": "Educación", "languages": "Idiomas", "contact": "Contacto" }
+    "toggleTheme": "Cambiar tema",
+    "sectionTitles": { "about": "Acerca de", "experience": "Experiencia", "projects": "Proyectos destacados", "skills": "Habilidades", "education": "Educación", "certifications": "Certificaciones", "patents": "Patentes", "courses": "Cursos", "languages": "Idiomas", "contact": "Contacto" }
   }
 }
