@@ -28,6 +28,7 @@ const educationEntry = z.object({
 const languageEntry = z.object({
   name: z.string(),
   level: z.string(),
+  code: z.enum(['es', 'en', 'ca', 'pt', 'fr', 'de']).optional(),
 });
 
 const certificationEntry = z.object({

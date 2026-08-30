@@ -1,5 +1,7 @@
 ---
 import type { CvData } from '../content/cv.schema';
+import Icon from './Icon.astro';
+import SectionIcon from './SectionIcon.astro';
 
 interface Props {
   title: string;
@@ -7,16 +9,31 @@ interface Props {
 }
 
 const { title, contact } = Astro.props;
+
+const links = [
+  { href: `mailto:${contact.email}`, icon: 'mail' as const, label: contact.email, external: false },
+  { href: contact.linkedin, icon: 'linkedin' as const, label: 'LinkedIn', external: true },
+  { href: contact.github, icon: 'github' as const, label: 'GitHub', external: true },
+  { href: contact.stackoverflow, icon: 'stackoverflow' as const, label: 'Stack Overflow', external: true },
+];
 ---
 <section id="contact" class="mx-auto max-w-2xl px-6 py-10">
   <h2 class="mb-4 flex items-center gap-3 text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-100">
-    <span class="h-6 w-1 rounded-full bg-gradient-to-b from-indigo-500 to-violet-500"></span>
+    <SectionIcon name="mail" />
     {title}
   </h2>
   <ul class="flex flex-wrap gap-4 text-slate-700 dark:text-slate-300">
-    <li><a class="text-indigo-600 hover:text-indigo-700 dark:text-indigo-400 dark:hover:text-indigo-300" href={`mailto:${contact.email}`}>{contact.email}</a></li>
-    <li><a class="text-indigo-600 hover:text-indigo-700 dark:text-indigo-400 dark:hover:text-indigo-300" href={contact.linkedin} target="_blank" rel="noopener">LinkedIn</a></li>
-    <li><a class="text-indigo-600 hover:text-indigo-700 dark:text-indigo-400 dark:hover:text-indigo-300" href={contact.github} target="_blank" rel="noopener">GitHub</a></li>
-    <li><a class="text-indigo-600 hover:text-indigo-700 dark:text-indigo-400 dark:hover:text-indigo-300" href={contact.stackoverflow} target="_blank" rel="noopener">Stack Overflow</a></li>
+    {links.map((link) => (
+      <li>
+        <a
+          class="inline-flex items-center gap-1.5 text-indigo-600 hover:text-indigo-700 dark:text-indigo-400 dark:hover:text-indigo-300"
+          href={link.href}
+          {...(link.external ? { target: '_blank', rel: 'noopener' } : {})}
+        >
+          <Icon name={link.icon} class="h-4 w-4 shrink-0" />
+          {link.label}
+        </a>
+      </li>
+    ))}
   </ul>
 </section>

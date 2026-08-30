@@ -97,9 +97,9 @@
     { "name": "Finanzbuchhaltung", "provider": "XETID", "year": "2014" }
   ],
   "languages": [
-    { "name": "Spanisch", "level": "Muttersprache" },
-    { "name": "Englisch", "level": "C1" },
-    { "name": "Französisch", "level": "B1" }
+    { "name": "Spanisch", "level": "Muttersprache", "code": "es" },
+    { "name": "Englisch", "level": "C1", "code": "en" },
+    { "name": "Französisch", "level": "B1", "code": "fr" }
   ],
   "contact": {
     "email": "mdriveaux2015@gmail.com",

@@ -97,9 +97,9 @@
     { "name": "Comptabilitat financera", "provider": "XETID", "year": "2014" }
   ],
   "languages": [
-    { "name": "Espanyol", "level": "Natiu" },
-    { "name": "Anglès", "level": "C1" },
-    { "name": "Francès", "level": "B1" }
+    { "name": "Espanyol", "level": "Natiu", "code": "es" },
+    { "name": "Anglès", "level": "C1", "code": "en" },
+    { "name": "Francès", "level": "B1", "code": "fr" }
   ],
   "contact": {
     "email": "mdriveaux2015@gmail.com",

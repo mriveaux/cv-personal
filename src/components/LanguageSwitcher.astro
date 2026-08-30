@@ -1,5 +1,6 @@
 ---
 import { LANGS, getLocalizedPath, type Lang } from '../i18n/langs';
+import Flag from './Flag.astro';
 
 interface Props {
   current: Lang;
@@ -8,13 +9,30 @@ interface Props {
 const { current } = Astro.props;
 const labels: Record<Lang, string> = { es: 'ES', en: 'EN', ca: 'CA', pt: 'PT', fr: 'FR', de: 'DE' };
 ---
-<nav aria-label="Language switcher" class="flex gap-2 text-sm">
-  {LANGS.map((lang) => (
-    <a
-      href={getLocalizedPath(lang)}
-      class={lang === current ? 'font-semibold text-indigo-600 dark:text-indigo-400' : 'text-slate-500 hover:text-indigo-600 dark:text-slate-400 dark:hover:text-indigo-400'}
-    >
-      {labels[lang]}
-    </a>
-  ))}
-</nav>
+<details class="lang-switcher relative text-sm">
+  <summary class="flex cursor-pointer list-none items-center gap-1.5 rounded-md border border-slate-200 px-2 py-1 text-slate-600 marker:content-none hover:border-indigo-300 hover:text-indigo-600 dark:border-slate-700 dark:text-slate-400 dark:hover:border-indigo-700 dark:hover:text-indigo-400">
+    <Flag code={current} />
+    <span class="font-medium">{labels[current]}</span>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3 w-3"><path d="m6 9 6 6 6-6" /></svg>
+  </summary>
+  <ul class="absolute right-0 z-20 mt-1 w-32 overflow-hidden rounded-md border border-slate-200 bg-white py-1 shadow-lg dark:border-slate-700 dark:bg-slate-900">
+    {LANGS.map((lang) => (
+      <li>
+        <a
+          href={getLocalizedPath(lang)}
+          class={`flex items-center gap-2 px-3 py-1.5 ${lang === current ? 'font-semibold text-indigo-600 dark:text-indigo-400' : 'text-slate-600 hover:bg-slate-50 dark:text-slate-400 dark:hover:bg-slate-800'}`}
+        >
+          <Flag code={lang} />
+          {labels[lang]}
+        </a>
+      </li>
+    ))}
+  </ul>
+</details>
+<script>
+  document.addEventListener('click', (event) => {
+    document.querySelectorAll<HTMLDetailsElement>('.lang-switcher[open]').forEach((el) => {
+      if (!el.contains(event.target as Node)) el.removeAttribute('open');
+    });
+  });
+</script>

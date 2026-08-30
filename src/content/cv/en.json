@@ -97,9 +97,9 @@
     { "name": "Financial accounting", "provider": "XETID", "year": "2014" }
   ],
   "languages": [
-    { "name": "Spanish", "level": "Native" },
-    { "name": "English", "level": "C1" },
-    { "name": "French", "level": "B1" }
+    { "name": "Spanish", "level": "Native", "code": "es" },
+    { "name": "English", "level": "C1", "code": "en" },
+    { "name": "French", "level": "B1", "code": "fr" }
   ],
   "contact": {
     "email": "mdriveaux2015@gmail.com",
