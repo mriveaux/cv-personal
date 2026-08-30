@@ -26,10 +26,13 @@ pnpm dev       # http://localhost:4321
 
 | Command        | Purpose                                  |
 | -------------- | ----------------------------------------- |
-| `pnpm dev`     | Start the local dev server                |
-| `pnpm build`   | Type-check content and build to `dist/`   |
-| `pnpm preview` | Preview the production build locally      |
-| `pnpm test`    | Run the Vitest content/schema test suite  |
+| `pnpm dev`             | Start the local dev server                                  |
+| `pnpm build`           | Type-check content and build to `dist/`                     |
+| `pnpm preview`         | Preview the production build locally                        |
+| `pnpm test`            | Run the Vitest content/schema test suite                     |
+| `pnpm run changelog`   | Write commits since the last git tag into `CHANGELOG.md`     |
+| `pnpm run deploy`      | Build and deploy to Cloudflare Workers                       |
+| `pnpm run release:patch` / `release:minor` / `release:major` | Bump version, update `CHANGELOG.md`, tag, push (triggers GitHub Pages), and deploy to Cloudflare — all in one step |
 
 ## Architecture
 
@@ -97,7 +100,17 @@ Light/dark mode uses Tailwind's `class` strategy. An inline script in `BaseLayou
 ## Deployment
 
 - **GitHub Pages**: `.github/workflows/deploy-gh-pages.yml` builds on every push to `main` with `DEPLOY_TARGET=gh-pages` (sets the `/cv-personal` base path) and publishes `dist/`.
-- **Cloudflare Workers**: `wrangler.jsonc` serves the built `dist/` directory as static assets.
+- **Cloudflare Workers**: `wrangler.jsonc` serves the built `dist/` directory as static assets. Deploy manually with `pnpm run deploy`.
+
+## Releasing
+
+```bash
+pnpm run release:patch   # or release:minor / release:major
+```
+
+This bumps the version in `package.json`, regenerates `CHANGELOG.md` from the commits since the last tag (via pnpm's `version` lifecycle hook), commits and tags the release, pushes to `main` (which triggers the GitHub Pages workflow), and deploys to Cloudflare Workers.
+
+To update the changelog without cutting a release, run `pnpm run changelog`.
 
 ## Testing
 

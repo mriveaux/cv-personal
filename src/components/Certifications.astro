@@ -15,7 +15,11 @@ const { title, items } = Astro.props;
   </h2>
   {items.map((cert) => (
     <div class="mb-2">
-      <p class="font-semibold text-slate-900 dark:text-slate-100">{cert.name}</p>
+      <p class="font-semibold text-slate-900 dark:text-slate-100">
+        {cert.url ? (
+          <a href={cert.url} class="text-indigo-600 hover:text-indigo-700 dark:text-indigo-400 dark:hover:text-indigo-300" target="_blank" rel="noopener">{cert.name}</a>
+        ) : ( cert.name )}
+      </p>
       <p class="text-slate-600 dark:text-slate-400">{cert.issuer} · {cert.date}</p>
     </div>
   ))}

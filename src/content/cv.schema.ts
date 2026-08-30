@@ -34,6 +34,7 @@ const certificationEntry = z.object({
   name: z.string(),
   issuer: z.string(),
   date: z.string(),
+  url: z.string().optional(),
 });
 
 const patentEntry = z.object({

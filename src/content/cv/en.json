@@ -78,7 +78,7 @@
     { "institution": "Universidad de las Ciencias Informáticas (UCI)", "degree": "Computer Science Engineer", "period": "2007 – 2012" }
   ],
   "certifications": [
-    { "name": "Claude Code 101", "issuer": "Claude Academy", "date": "August 30, 2026" }
+    { "name": "Claude Code 101", "issuer": "Claude Academy", "date": "August 30, 2026", "url": "https://academy.claude.com/verify/117ec0c118e884341b58ceb908db115e" }
   ],
   "patents": [
     {
