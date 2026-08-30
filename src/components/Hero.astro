@@ -1,0 +1,14 @@
+---
+import type { CvData } from '../content/cv.schema';
+
+interface Props {
+  hero: CvData['hero'];
+}
+
+const { hero } = Astro.props;
+---
+<section class="px-6 py-16 text-center">
+  <h1 class="text-4xl font-bold tracking-tight sm:text-5xl">{hero.name}</h1>
+  <p class="mt-2 text-xl text-slate-600">{hero.title}</p>
+  <p class="mt-1 text-sm text-slate-400">{hero.location}</p>
+</section>

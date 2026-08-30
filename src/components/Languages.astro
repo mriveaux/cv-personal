@@ -1,0 +1,18 @@
+---
+import type { CvData } from '../content/cv.schema';
+
+interface Props {
+  title: string;
+  items: CvData['languages'];
+}
+
+const { title, items } = Astro.props;
+---
+<section id="languages" class="mx-auto max-w-2xl px-6 py-10">
+  <h2 class="mb-4 text-2xl font-semibold">{title}</h2>
+  <ul class="flex flex-wrap gap-4">
+    {items.map((language) => (
+      <li class="text-slate-700"><span class="font-semibold">{language.name}:</span> {language.level}</li>
+    ))}
+  </ul>
+</section>

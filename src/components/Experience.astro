@@ -1,0 +1,24 @@
+---
+import type { CvData } from '../content/cv.schema';
+
+interface Props {
+  title: string;
+  items: CvData['experience'];
+}
+
+const { title, items } = Astro.props;
+---
+<section id="experience" class="mx-auto max-w-2xl px-6 py-10">
+  <h2 class="mb-6 text-2xl font-semibold">{title}</h2>
+  <ol class="space-y-8 border-l border-slate-200 pl-6">
+    {items.map((job) => (
+      <li>
+        <p class="text-sm text-slate-400">{job.period} · {job.location}</p>
+        <p class="font-semibold">{job.role} — {job.company}</p>
+        <ul class="mt-2 list-disc space-y-1 pl-5 text-slate-700">
+          {job.highlights.map((highlight) => <li>{highlight}</li>)}
+        </ul>
+      </li>
+    ))}
+  </ol>
+</section>

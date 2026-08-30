@@ -1,0 +1,27 @@
+---
+import type { CvData } from '../content/cv.schema';
+
+interface Props {
+  title: string;
+  items: CvData['featuredProjects'];
+}
+
+const { title, items } = Astro.props;
+---
+<section id="projects" class="mx-auto max-w-2xl px-6 py-10">
+  <h2 class="mb-6 text-2xl font-semibold">{title}</h2>
+  <div class="grid gap-6 sm:grid-cols-2">
+    {items.map((project) => (
+      <article class="rounded-lg border border-slate-200 p-4">
+        <h3 class="font-semibold">
+          {project.url ? (
+            <a href={project.url} class="hover:underline" target="_blank" rel="noopener">{project.name}</a>
+          ) : (
+            project.name
+          )}
+        </h3>
+        <p class="mt-1 text-sm text-slate-700">{project.description}</p>
+      </article>
+    ))}
+  </div>
+</section>

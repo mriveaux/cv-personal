@@ -1,0 +1,38 @@
+---
+import { getEntry } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from './Header.astro';
+import Hero from './Hero.astro';
+import About from './About.astro';
+import Experience from './Experience.astro';
+import Projects from './Projects.astro';
+import Skills from './Skills.astro';
+import Education from './Education.astro';
+import Languages from './Languages.astro';
+import Contact from './Contact.astro';
+import Footer from './Footer.astro';
+import type { Lang } from '../i18n/langs';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const entry = await getEntry('cv', lang);
+if (!entry) {
+  throw new Error(`Missing CV content for locale "${lang}"`);
+}
+const cv = entry.data;
+---
+<BaseLayout lang={lang} title={`${cv.hero.name} — ${cv.hero.title}`}>
+  <Header lang={lang} ui={cv.ui} name={cv.hero.name} />
+  <Hero hero={cv.hero} />
+  <About title={cv.ui.sectionTitles.about} about={cv.about} />
+  <Experience title={cv.ui.sectionTitles.experience} items={cv.experience} />
+  <Projects title={cv.ui.sectionTitles.projects} items={cv.featuredProjects} />
+  <Skills title={cv.ui.sectionTitles.skills} skills={cv.skills} />
+  <Education title={cv.ui.sectionTitles.education} items={cv.education} />
+  <Languages title={cv.ui.sectionTitles.languages} items={cv.languages} />
+  <Contact title={cv.ui.sectionTitles.contact} contact={cv.contact} />
+  <Footer name={cv.hero.name} />
+</BaseLayout>

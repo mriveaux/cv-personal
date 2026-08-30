@@ -1,0 +1,19 @@
+---
+import type { CvData } from '../content/cv.schema';
+
+interface Props {
+  title: string;
+  items: CvData['education'];
+}
+
+const { title, items } = Astro.props;
+---
+<section id="education" class="mx-auto max-w-2xl px-6 py-10">
+  <h2 class="mb-4 text-2xl font-semibold">{title}</h2>
+  {items.map((edu) => (
+    <div class="mb-2">
+      <p class="font-semibold">{edu.degree}</p>
+      <p class="text-slate-600">{edu.institution} · {edu.period}</p>
+    </div>
+  ))}
+</section>

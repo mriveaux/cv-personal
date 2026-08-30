@@ -1,0 +1,19 @@
+---
+import type { CvData } from '../content/cv.schema';
+
+interface Props {
+  title: string;
+  contact: CvData['contact'];
+}
+
+const { title, contact } = Astro.props;
+---
+<section id="contact" class="mx-auto max-w-2xl px-6 py-10">
+  <h2 class="mb-4 text-2xl font-semibold">{title}</h2>
+  <ul class="flex flex-wrap gap-4 text-slate-700">
+    <li><a class="hover:underline" href={`mailto:${contact.email}`}>{contact.email}</a></li>
+    <li><a class="hover:underline" href={contact.linkedin} target="_blank" rel="noopener">LinkedIn</a></li>
+    <li><a class="hover:underline" href={contact.github} target="_blank" rel="noopener">GitHub</a></li>
+    <li><a class="hover:underline" href={contact.stackoverflow} target="_blank" rel="noopener">Stack Overflow</a></li>
+  </ul>
+</section>
