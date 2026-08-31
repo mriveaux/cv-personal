@@ -6,9 +6,25 @@ interface Props {
 const { label } = Astro.props;
 ---
 <button
+  id="download-cv"
   type="button"
   class="no-print rounded-md bg-gradient-to-r from-indigo-600 to-violet-600 px-4 py-2 text-sm font-medium text-white shadow-sm transition-opacity hover:opacity-90"
-  onclick="window.print()"
 >
   {label}
 </button>
+
+<script>
+  const button = document.getElementById('download-cv');
+  button?.addEventListener('click', () => {
+    const wasDark = document.documentElement.classList.contains('dark');
+    if (wasDark) document.documentElement.classList.remove('dark');
+
+    const restoreDark = () => {
+      if (wasDark) document.documentElement.classList.add('dark');
+      window.removeEventListener('afterprint', restoreDark);
+    };
+    window.addEventListener('afterprint', restoreDark);
+
+    window.print();
+  });
+</script>
