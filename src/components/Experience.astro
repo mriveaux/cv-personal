@@ -18,9 +18,28 @@ const { title, items } = Astro.props;
     {items.map((job) => (
       <li>
         <p class="text-sm text-slate-400 dark:text-slate-500">{job.period} · {job.location}</p>
-        <p class="font-semibold text-slate-900 dark:text-slate-100">{job.role} — {job.company}</p>
+        <p class="font-semibold text-slate-900 dark:text-slate-100">
+          {job.role} —{' '}
+          {job.url ? (
+            <a href={job.url} class="text-indigo-600 hover:text-indigo-700 dark:text-indigo-400 dark:hover:text-indigo-300" target="_blank" rel="noopener">{job.company}</a>
+          ) : (
+            job.company
+          )}
+        </p>
         <ul class="mt-2 list-disc space-y-1 pl-5 text-slate-700 dark:text-slate-300">
-          {job.highlights.map((highlight) => <li>{highlight}</li>)}
+          {job.highlights.map((highlight) => (
+            <li>
+              {typeof highlight === 'string'
+                ? highlight
+                : highlight.map((part) =>
+                    typeof part === 'string' ? (
+                      part
+                    ) : (
+                      <a href={part.url} class="text-indigo-600 hover:text-indigo-700 dark:text-indigo-400 dark:hover:text-indigo-300" target="_blank" rel="noopener">{part.text}</a>
+                    ),
+                  )}
+            </li>
+          ))}
         </ul>
       </li>
     ))}

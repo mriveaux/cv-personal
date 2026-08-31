@@ -1,11 +1,15 @@
 import { z } from 'zod';
 
+const highlightPart = z.union([z.string(), z.object({ text: z.string(), url: z.string() })]);
+const highlightEntry = z.union([z.string(), z.array(highlightPart)]);
+
 const experienceEntry = z.object({
   company: z.string(),
+  url: z.string().optional(),
   role: z.string(),
   period: z.string(),
   location: z.string(),
-  highlights: z.array(z.string()),
+  highlights: z.array(highlightEntry),
 });
 
 const projectEntry = z.object({
@@ -21,6 +25,7 @@ const skillCategory = z.object({
 
 const educationEntry = z.object({
   institution: z.string(),
+  url: z.string().optional(),
   degree: z.string(),
   period: z.string(),
 });

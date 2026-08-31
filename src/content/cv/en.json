@@ -8,31 +8,35 @@
   "experience": [
     {
       "company": "Flexibleplaces",
+      "url": "https://fxpsolutions.com/es/",
       "role": "Software Developer",
       "period": "January 2024 – Present",
       "location": "Madrid, Spain (hybrid)",
-      "highlights": ["Development of Flexibleplaces' space management and booking platform."]
+      "highlights": [[{ "text": "Development of Flexibleplaces' space management and booking platform.", "url": "https://flexibleplaces.fxpsolutions.com" }]]
     },
     {
       "company": "Flexibleplaces",
+      "url": "https://fxpsolutions.com/es/",
       "role": "Software Developer (freelance)",
       "period": "June 2022 – January 2024",
       "location": "Remote",
       "highlights": ["Remote collaboration as an independent developer before joining full-time."]
     },
     {
-      "company": "Desoft",
+      "company": "DESOFT",
+      "url": "https://www.desoft.cu/es",
       "role": "Senior Software Developer — Grade B Computer Science Specialist",
       "period": "September 2017 – January 2024",
       "location": "Havana, Cuba",
       "highlights": [
         "Software developer, Configuration Manager, and Head of the Architecture Committee.",
         "Asset Management Control System for the Office of the Historian of Havana.",
-        "Websites for Pesca Caribe, Cuba's Central Commercial Registry (RCC), UPTCER, and ANTEX."
+        ["Websites for Pesca Caribe, Cuba's Central Commercial Registry (RCC), ", { "text": "UPTCER", "url": "https://www.uptcer.gob.cu" }, ", and ANTEX."]
       ]
     },
     {
       "company": "GESICU (Specialized IT Services Group)",
+      "url": "https://gesicu.wordpress.com",
       "role": "CEO and Freelance Software Engineer",
       "period": "February 2016 – November 2022",
       "location": "Cuba",
@@ -50,6 +54,7 @@
     },
     {
       "company": "XETID",
+      "url": "https://www.xetid.cu/es",
       "role": "Full Stack Developer",
       "period": "August 2012 – August 2016",
       "location": "Cuba",
@@ -75,7 +80,7 @@
     ]
   },
   "education": [
-    { "institution": "Universidad de las Ciencias Informáticas (UCI)", "degree": "Computer Science Engineer", "period": "2007 – 2012" }
+    { "institution": "Universidad de las Ciencias Informáticas (UCI)", "url": "https://www.uci.cu", "degree": "Computer Science Engineer", "period": "2007 – 2012" }
   ],
   "certifications": [
     { "name": "Claude Code 101", "issuer": "Claude Academy", "date": "August 30, 2026", "url": "https://academy.claude.com/verify/117ec0c118e884341b58ceb908db115e" }
@@ -90,7 +95,7 @@
     }
   ],
   "courses": [
-    { "name": "Creation of websites in the cloud with HTML5/CSS3/Bootstrap", "provider": "Desoft", "year": "2017" },
+    { "name": "Creation of websites in the cloud with HTML5/CSS3/Bootstrap", "provider": "DESOFT", "year": "2017" },
     { "name": "Business process management and mining", "provider": "GESICU", "year": "2016" },
     { "name": "Spatial databases with open source technologies", "provider": "GESICU", "year": "2016" },
     { "name": "Advanced Linux administration", "provider": "GESICU", "year": "2017" },
