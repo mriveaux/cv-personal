@@ -6,15 +6,21 @@ import SectionIcon from './SectionIcon.astro';
 interface Props {
   title: string;
   contact: CvData['contact'];
+  cloudflareUrl: string;
+  githubPagesUrl: string;
 }
 
-const { title, contact } = Astro.props;
+const { title, contact, cloudflareUrl, githubPagesUrl } = Astro.props;
+
+const stripProtocol = (url: string) => url.replace(/^https?:\/\//, '').replace(/\/$/, '');
 
 const links = [
   { href: `mailto:${contact.email}`, icon: 'mail' as const, label: contact.email, external: false },
   { href: contact.linkedin, icon: 'linkedin' as const, label: 'LinkedIn', external: true },
   { href: contact.github, icon: 'github' as const, label: 'GitHub', external: true },
   { href: contact.stackoverflow, icon: 'stackoverflow' as const, label: 'Stack Overflow', external: true },
+  { href: cloudflareUrl, icon: 'globe' as const, label: stripProtocol(cloudflareUrl), external: true },
+  { href: githubPagesUrl, icon: 'globe' as const, label: stripProtocol(githubPagesUrl), external: true },
 ];
 ---
 <section id="contact" class="mx-auto max-w-2xl px-6 py-10">

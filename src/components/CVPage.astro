@@ -1,7 +1,7 @@
 ---
 import { getEntry } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { SITE_URL } from '../site';
+import { SITE_URL, WORKERS_URL } from '../site';
 import { getLocalizedPath } from '../i18n/langs';
 import Header from './Header.astro';
 import Hero from './Hero.astro';
@@ -45,6 +45,7 @@ function truncate(text: string, maxLength: number): string {
 
 const description = truncate(cv.about, 160);
 const canonicalUrl = `${SITE_URL}${getLocalizedPath(lang)}`;
+const workersUrl = `${WORKERS_URL}${getLocalizedPath(lang)}`;
 const ogLocale = OG_LOCALES[lang];
 ---
 <BaseLayout
@@ -65,6 +66,6 @@ const ogLocale = OG_LOCALES[lang];
   <Courses title={cv.ui.sectionTitles.courses} items={cv.courses} />
   <Patents title={cv.ui.sectionTitles.patents} items={cv.patents} />
   <Languages title={cv.ui.sectionTitles.languages} items={cv.languages} />
-  <Contact title={cv.ui.sectionTitles.contact} contact={cv.contact} />
+  <Contact title={cv.ui.sectionTitles.contact} contact={cv.contact} cloudflareUrl={workersUrl} githubPagesUrl={canonicalUrl} />
   <Footer name={cv.hero.name} />
 </BaseLayout>
