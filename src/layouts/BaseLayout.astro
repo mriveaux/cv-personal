@@ -47,6 +47,69 @@ const imageUrl = `${SITE_URL}${OG_IMAGE_PATH}`;
     </script>
   </head>
   <body class="bg-white text-slate-900 antialiased transition-colors dark:bg-slate-900 dark:text-slate-100">
+    <div id="scroll-progress" class="no-print"></div>
     <slot />
+    <script>
+      const progressBar = document.getElementById('scroll-progress');
+      if (progressBar) {
+        const updateProgress = () => {
+          const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+          const progress = scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
+          progressBar.style.width = `${progress}%`;
+        };
+        window.addEventListener('scroll', updateProgress, { passive: true });
+        window.addEventListener('resize', updateProgress);
+        updateProgress();
+      }
+
+      const navLinks = Array.from(document.querySelectorAll<HTMLAnchorElement>('header nav a[href^="#"]'));
+      const sections = navLinks
+        .map((link) => document.getElementById(link.getAttribute('href')!.slice(1)))
+        .filter((section): section is HTMLElement => section !== null);
+
+      const setActiveLink = (id: string | null) => {
+        for (const link of navLinks) {
+          const isActive = link.getAttribute('href') === `#${id}`;
+          link.classList.toggle('text-indigo-600', isActive);
+          link.classList.toggle('dark:text-indigo-400', isActive);
+          link.classList.toggle('font-semibold', isActive);
+        }
+      };
+
+      if (sections.length > 0) {
+        const navObserver = new IntersectionObserver(
+          (entries) => {
+            const visible = entries.filter((entry) => entry.isIntersecting);
+            if (visible.length > 0) {
+              setActiveLink(visible[0].target.id);
+            }
+          },
+          { rootMargin: '-45% 0px -45% 0px' },
+        );
+        sections.forEach((section) => navObserver.observe(section));
+      }
+
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const revealSections = document.querySelectorAll('section[id]:not(#hero)');
+      if (reduceMotion) {
+        revealSections.forEach((section) => section.classList.add('reveal-visible'));
+      } else {
+        const revealObserver = new IntersectionObserver(
+          (entries, observer) => {
+            for (const entry of entries) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('reveal-visible');
+                observer.unobserve(entry.target);
+              }
+            }
+          },
+          { threshold: 0.15 },
+        );
+        revealSections.forEach((section) => {
+          section.classList.add('reveal');
+          revealObserver.observe(section);
+        });
+      }
+    </script>
   </body>
 </html>

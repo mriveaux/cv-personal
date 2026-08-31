@@ -16,7 +16,8 @@ const { title, items } = Astro.props;
   </h2>
   <ol class="space-y-8 border-l-2 border-indigo-100 pl-6 dark:border-indigo-950">
     {items.map((job) => (
-      <li>
+      <li class="relative">
+        <span class="absolute -left-[29px] top-1 h-3 w-3 rounded-full bg-gradient-to-b from-indigo-500 to-violet-500 ring-4 ring-white dark:ring-slate-900"></span>
         <p class="text-sm text-slate-400 dark:text-slate-500">{job.period} · {job.location}</p>
         <p class="font-semibold text-slate-900 dark:text-slate-100">
           {job.role} —{' '}
