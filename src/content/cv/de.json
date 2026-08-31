@@ -73,10 +73,11 @@
   ],
   "skills": {
     "categories": [
-      { "name": "Sprachen und Frameworks", "items": ["Java & Spring", "C#", "PHP", "JavaScript/TypeScript", "HTML/CSS", "ASP.NET MVC", "Vue.js", "Angular"] },
-      { "name": "Daten", "items": ["SQL", "PL/pgSQL & GIS"] },
-      { "name": "Werkzeuge und Technologien", "items": ["Git", "AWS", "Firebase", "ExtJS", "jQuery", "WordPress", "Doctrine", "Symfony/Laravel", "Bootstrap/TailwindCSS"] },
-      { "name": "Methoden", "items": ["Scrum", "Führung von Entwicklungsteams", "Projektmanagement", "Softwareanalyse und -architektur"] }
+      { "name": "Sprachen und Frameworks", "items": ["Java", "Spring Framework", "C#", "PHP", "Laravel", "Symfony", "Doctrine", "JavaScript", "TypeScript", "Node.js", "NestJS", "jQuery", "ExtJS", "HTML", "CSS/SASS", "Bootstrap", "ASP.NET MVC", "Vue.js", "Angular"] },
+      { "name": "Datenbanken", "items": ["SQL", "MySQL", "PostgreSQL (PL/pgSQL & GIS)", "MongoDB", "SQLite", "NoSQL"] },
+      { "name": "DevOps und Infrastruktur", "items": ["Docker", "Git", "GitHub", "Linux/Ubuntu", "Apache", "Nginx", "WordPress", "AWS", "Firebase"] },
+      { "name": "Architektur und Integration", "items": ["REST", "SOAP", "SaaS", "ERP"] },
+      { "name": "Methoden und Führung", "items": ["Scrum", "Projektmanagement", "Führung von Entwicklungsteams", "Softwareanalyse und -architektur"] }
     ]
   },
   "education": [

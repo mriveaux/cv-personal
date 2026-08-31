@@ -73,10 +73,11 @@
   ],
   "skills": {
     "categories": [
-      { "name": "Llenguatges i frameworks", "items": ["Java & Spring", "C#", "PHP", "JavaScript/TypeScript", "HTML/CSS", "ASP.NET MVC", "Vue.js", "Angular"] },
-      { "name": "Dades", "items": ["SQL", "PL/pgSQL & GIS"] },
-      { "name": "Eines i tecnologies", "items": ["Git", "AWS", "Firebase", "ExtJS", "jQuery", "WordPress", "Doctrine", "Symfony/Laravel", "Bootstrap/TailwindCSS"] },
-      { "name": "Metodologies", "items": ["Scrum", "Lideratge d'equips de desenvolupament", "Gestió de projectes", "Anàlisi i arquitectura de software"] }
+      { "name": "Llenguatges i frameworks", "items": ["Java", "Spring Framework", "C#", "PHP", "Laravel", "Symfony", "Doctrine", "JavaScript", "TypeScript", "Node.js", "NestJS", "jQuery", "ExtJS", "HTML", "CSS/SASS", "Bootstrap", "ASP.NET MVC", "Vue.js", "Angular"] },
+      { "name": "Bases de dades", "items": ["SQL", "MySQL", "PostgreSQL (PL/pgSQL & GIS)", "MongoDB", "SQLite", "NoSQL"] },
+      { "name": "DevOps i infraestructura", "items": ["Docker", "Git", "GitHub", "Linux/Ubuntu", "Apache", "Nginx", "WordPress", "AWS", "Firebase"] },
+      { "name": "Arquitectura i integració", "items": ["REST", "SOAP", "SaaS", "ERP"] },
+      { "name": "Metodologies i lideratge", "items": ["Scrum", "Gestió de projectes", "Lideratge d'equips de desenvolupament", "Anàlisi i arquitectura de software"] }
     ]
   },
   "education": [
