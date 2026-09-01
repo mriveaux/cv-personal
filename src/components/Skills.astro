@@ -19,8 +19,13 @@ const { title, skills } = Astro.props;
       <div>
         <h3 class="mb-2 font-semibold text-slate-800 dark:text-slate-200">{category.name}</h3>
         <ul class="flex flex-wrap gap-2">
-          {category.items.map((item) => (
-            <li class="rounded-full bg-indigo-50 px-3 py-1 text-sm text-indigo-700 dark:bg-indigo-950/50 dark:text-indigo-300">{item}</li>
+          {category.items.map((item, i) => (
+            <li
+              class="stagger-item cursor-default rounded-full bg-indigo-50 px-3 py-1 text-sm text-indigo-700 hover:-translate-y-0.5 hover:scale-110 hover:bg-indigo-100 hover:shadow-md dark:bg-indigo-950/50 dark:text-indigo-300 dark:hover:bg-indigo-900/60"
+              style={`--stagger-index: ${i}`}
+            >
+              {item}
+            </li>
           ))}
         </ul>
       </div>

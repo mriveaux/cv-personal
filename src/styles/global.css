@@ -25,10 +25,33 @@
   transform: translateY(0);
 }
 
+.stagger-item {
+  opacity: 0;
+  translate: 0 10px;
+  transition:
+    opacity 0.45s ease-out calc(var(--stagger-index, 0) * 60ms),
+    translate 0.45s ease-out calc(var(--stagger-index, 0) * 60ms),
+    transform 0.2s ease-out,
+    box-shadow 0.2s ease-out,
+    border-color 0.2s ease-out,
+    background-color 0.2s ease-out;
+}
+
+.reveal-visible .stagger-item {
+  opacity: 1;
+  translate: 0 0;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .reveal {
     opacity: 1;
     transform: none;
+    transition: none;
+  }
+
+  .stagger-item {
+    opacity: 1;
+    translate: none;
     transition: none;
   }
 }
@@ -55,5 +78,10 @@
   .reveal {
     opacity: 1 !important;
     transform: none !important;
+  }
+
+  .stagger-item {
+    opacity: 1 !important;
+    translate: none !important;
   }
 }
