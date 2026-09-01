@@ -9,9 +9,10 @@ interface Props {
   cloudflareUrl: string;
   githubPagesUrl: string;
   githubActivity: string;
+  gitlabActivity: string;
 }
 
-const { title, contact, cloudflareUrl, githubPagesUrl, githubActivity } = Astro.props;
+const { title, contact, cloudflareUrl, githubPagesUrl, githubActivity, gitlabActivity } = Astro.props;
 
 const stripProtocol = (url: string) => url.replace(/^https?:\/\//, '').replace(/\/$/, '');
 
@@ -43,8 +44,14 @@ const links = [
       </li>
     ))}
   </ul>
-  <p class="mt-4 inline-flex items-center gap-1.5 text-sm text-slate-500 dark:text-slate-400">
-    <Icon name="activity" class="h-4 w-4 shrink-0" />
-    {githubActivity}
-  </p>
+  <div class="mt-4 flex flex-col gap-1.5 text-sm text-slate-500 dark:text-slate-400">
+    <p class="inline-flex items-center gap-1.5">
+      <Icon name="activity" class="h-4 w-4 shrink-0" />
+      {githubActivity}
+    </p>
+    <p class="inline-flex items-center gap-1.5">
+      <Icon name="activity" class="h-4 w-4 shrink-0" />
+      {gitlabActivity}
+    </p>
+  </div>
 </section>

@@ -118,6 +118,7 @@
     "downloadCta": "Télécharger le CV",
     "toggleTheme": "Changer de thème",
     "githubActivity": "211 contributions GitHub au cours de la dernière année",
+    "gitlabActivity": "3 753 contributions historiques sur GitLab",
     "sectionTitles": { "about": "À propos", "experience": "Expérience", "projects": "Projets phares", "skills": "Compétences", "education": "Formation", "certifications": "Certifications", "patents": "Brevets", "courses": "Cours", "languages": "Langues", "contact": "Contact" }
   }
 }

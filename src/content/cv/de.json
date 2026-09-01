@@ -118,6 +118,7 @@
     "downloadCta": "Lebenslauf herunterladen",
     "toggleTheme": "Thema wechseln",
     "githubActivity": "211 GitHub-Beiträge im letzten Jahr",
+    "gitlabActivity": "3.753 historische GitLab-Beiträge",
     "sectionTitles": { "about": "Über mich", "experience": "Erfahrung", "projects": "Ausgewählte Projekte", "skills": "Fähigkeiten", "education": "Ausbildung", "certifications": "Zertifizierungen", "patents": "Patente", "courses": "Kurse", "languages": "Sprachen", "contact": "Kontakt" }
   }
 }

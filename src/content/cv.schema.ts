@@ -99,6 +99,7 @@ export const cvSchema = z.object({
     sectionTitles: navLabels,
     toggleTheme: z.string(),
     githubActivity: z.string(),
+    gitlabActivity: z.string(),
   }),
 });
 
