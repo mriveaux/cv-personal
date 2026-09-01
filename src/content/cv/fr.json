@@ -119,6 +119,7 @@
     "toggleTheme": "Changer de thème",
     "githubActivity": "211 contributions GitHub au cours de la dernière année",
     "gitlabActivity": "3 753 contributions historiques sur GitLab",
+    "cookieConsent": { "message": "Nous utilisons des cookies analytiques pour comprendre l'utilisation de ce site. Les acceptez-vous ?", "accept": "Accepter", "reject": "Refuser" },
     "sectionTitles": { "about": "À propos", "experience": "Expérience", "projects": "Projets phares", "skills": "Compétences", "education": "Formation", "certifications": "Certifications", "patents": "Brevets", "courses": "Cours", "languages": "Langues", "contact": "Contact" }
   }
 }

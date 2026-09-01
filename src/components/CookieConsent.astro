@@ -1,0 +1,76 @@
+---
+import { GA_MEASUREMENT_ID } from '../site';
+import type { CvData } from '../content/cv.schema';
+
+interface Props {
+  ui: CvData['ui']['cookieConsent'];
+}
+
+const { ui } = Astro.props;
+---
+{import.meta.env.PROD && (
+  <div
+    id="cookie-consent"
+    class="no-print fixed inset-x-0 bottom-0 z-40 hidden border-t border-slate-200 bg-white/95 px-6 py-4 backdrop-blur dark:border-slate-800 dark:bg-slate-900/95"
+  >
+    <div class="mx-auto flex max-w-2xl flex-wrap items-center justify-between gap-4">
+      <p class="text-sm text-slate-600 dark:text-slate-400">{ui.message}</p>
+      <div class="flex shrink-0 gap-3">
+        <button
+          id="cookie-reject"
+          type="button"
+          class="rounded-md px-3 py-1.5 text-sm font-medium text-slate-600 transition-colors hover:text-indigo-600 dark:text-slate-400 dark:hover:text-indigo-400"
+        >
+          {ui.reject}
+        </button>
+        <button
+          id="cookie-accept"
+          type="button"
+          class="rounded-md bg-gradient-to-r from-indigo-600 to-violet-600 px-4 py-1.5 text-sm font-medium text-white shadow-sm transition-opacity hover:opacity-90"
+        >
+          {ui.accept}
+        </button>
+      </div>
+    </div>
+  </div>
+  <script define:vars={{ gaId: GA_MEASUREMENT_ID }}>
+    const CONSENT_KEY = 'cookie-consent';
+
+    function loadGA() {
+      if (window.__gaLoaded) return;
+      window.__gaLoaded = true;
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${gaId}`;
+      document.head.appendChild(script);
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function gtag() {
+        window.dataLayer.push(arguments);
+      };
+      window.gtag('js', new Date());
+      window.gtag('config', gaId);
+    }
+
+    const banner = document.getElementById('cookie-consent');
+    const acceptBtn = document.getElementById('cookie-accept');
+    const rejectBtn = document.getElementById('cookie-reject');
+
+    const stored = localStorage.getItem(CONSENT_KEY);
+    if (stored === 'accepted') {
+      loadGA();
+    } else if (stored !== 'rejected') {
+      banner?.classList.remove('hidden');
+    }
+
+    acceptBtn?.addEventListener('click', () => {
+      localStorage.setItem(CONSENT_KEY, 'accepted');
+      loadGA();
+      banner?.classList.add('hidden');
+    });
+
+    rejectBtn?.addEventListener('click', () => {
+      localStorage.setItem(CONSENT_KEY, 'rejected');
+      banner?.classList.add('hidden');
+    });
+  </script>
+)}

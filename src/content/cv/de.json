@@ -119,6 +119,7 @@
     "toggleTheme": "Thema wechseln",
     "githubActivity": "211 GitHub-Beiträge im letzten Jahr",
     "gitlabActivity": "3.753 historische GitLab-Beiträge",
+    "cookieConsent": { "message": "Wir verwenden Analyse-Cookies, um zu verstehen, wie diese Seite genutzt wird. Akzeptieren Sie sie?", "accept": "Akzeptieren", "reject": "Ablehnen" },
     "sectionTitles": { "about": "Über mich", "experience": "Erfahrung", "projects": "Ausgewählte Projekte", "skills": "Fähigkeiten", "education": "Ausbildung", "certifications": "Zertifizierungen", "patents": "Patente", "courses": "Kurse", "languages": "Sprachen", "contact": "Kontakt" }
   }
 }

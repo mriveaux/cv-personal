@@ -16,6 +16,7 @@ import Patents from './Patents.astro';
 import Languages from './Languages.astro';
 import Contact from './Contact.astro';
 import Footer from './Footer.astro';
+import CookieConsent from './CookieConsent.astro';
 import type { Lang } from '../i18n/langs';
 
 interface Props {
@@ -68,4 +69,5 @@ const ogLocale = OG_LOCALES[lang];
   <Languages title={cv.ui.sectionTitles.languages} items={cv.languages} />
   <Contact title={cv.ui.sectionTitles.contact} contact={cv.contact} cloudflareUrl={workersUrl} githubPagesUrl={canonicalUrl} githubActivity={cv.ui.githubActivity} gitlabActivity={cv.ui.gitlabActivity} />
   <Footer name={cv.hero.name} />
+  <CookieConsent ui={cv.ui.cookieConsent} />
 </BaseLayout>

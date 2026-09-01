@@ -100,6 +100,11 @@ export const cvSchema = z.object({
     toggleTheme: z.string(),
     githubActivity: z.string(),
     gitlabActivity: z.string(),
+    cookieConsent: z.object({
+      message: z.string(),
+      accept: z.string(),
+      reject: z.string(),
+    }),
   }),
 });
 
