@@ -117,6 +117,7 @@
     "nav": { "about": "Über mich", "experience": "Erfahrung", "projects": "Projekte", "skills": "Fähigkeiten", "education": "Ausbildung", "certifications": "Zertifizierungen", "patents": "Patente", "courses": "Kurse", "languages": "Sprachen", "contact": "Kontakt" },
     "downloadCta": "Lebenslauf herunterladen",
     "toggleTheme": "Thema wechseln",
+    "githubActivity": "211 GitHub-Beiträge im letzten Jahr",
     "sectionTitles": { "about": "Über mich", "experience": "Erfahrung", "projects": "Ausgewählte Projekte", "skills": "Fähigkeiten", "education": "Ausbildung", "certifications": "Zertifizierungen", "patents": "Patente", "courses": "Kurse", "languages": "Sprachen", "contact": "Kontakt" }
   }
 }

@@ -13,7 +13,8 @@ export type IconName =
   | 'book-open'
   | 'bulb'
   | 'language'
-  | 'globe';
+  | 'globe'
+  | 'activity';
 
 interface Props {
   name: IconName;
@@ -41,6 +42,7 @@ const strokeIcons: Partial<Record<IconName, string>> = {
     'M4.5 6h9M9 4.5v1.5m0 0c0 3.5-2.2 6.5-4.5 8m4.5-8c1.4 3 3.6 5 6 6.2M15 20.25l3.75-7.5 3.75 7.5m-6.75-2.25h6',
   globe:
     'M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm0 0c2.25 2.4 3.5 5.5 3.5 9s-1.25 6.6-3.5 9m0-18c-2.25 2.4-3.5 5.5-3.5 9s1.25 6.6 3.5 9M3.25 9h17.5M3.25 15h17.5',
+  activity: 'M4 20V10.5M9.5 20V4M15 20v-7M20 20V8.5',
 };
 
 const brandIcons: Partial<Record<IconName, string>> = {

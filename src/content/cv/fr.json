@@ -117,6 +117,7 @@
     "nav": { "about": "À propos", "experience": "Expérience", "projects": "Projets", "skills": "Compétences", "education": "Formation", "certifications": "Certifications", "patents": "Brevets", "courses": "Cours", "languages": "Langues", "contact": "Contact" },
     "downloadCta": "Télécharger le CV",
     "toggleTheme": "Changer de thème",
+    "githubActivity": "211 contributions GitHub au cours de la dernière année",
     "sectionTitles": { "about": "À propos", "experience": "Expérience", "projects": "Projets phares", "skills": "Compétences", "education": "Formation", "certifications": "Certifications", "patents": "Brevets", "courses": "Cours", "languages": "Langues", "contact": "Contact" }
   }
 }

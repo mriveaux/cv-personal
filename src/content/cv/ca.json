@@ -117,6 +117,7 @@
     "nav": { "about": "Sobre mi", "experience": "Experiència", "projects": "Projectes", "skills": "Habilitats", "education": "Educació", "certifications": "Certificacions", "patents": "Patents", "courses": "Cursos", "languages": "Idiomes", "contact": "Contacte" },
     "downloadCta": "Descarregar CV",
     "toggleTheme": "Canviar tema",
+    "githubActivity": "211 contribucions a GitHub l'últim any",
     "sectionTitles": { "about": "Sobre mi", "experience": "Experiència", "projects": "Projectes destacats", "skills": "Habilitats", "education": "Educació", "certifications": "Certificacions", "patents": "Patents", "courses": "Cursos", "languages": "Idiomes", "contact": "Contacte" }
   }
 }
