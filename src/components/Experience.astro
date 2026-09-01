@@ -14,10 +14,12 @@ const { title, items } = Astro.props;
     <SectionIcon name="briefcase" />
     {title}
   </h2>
-  <ol class="space-y-8 border-l-2 border-indigo-100 pl-6 dark:border-indigo-950">
+  <ol id="experience-timeline" class="relative space-y-8 pl-6">
+    <div class="pointer-events-none absolute inset-y-0 left-0 w-0.5 bg-indigo-100 dark:bg-indigo-950" aria-hidden="true"></div>
+    <div id="experience-timeline-fill" class="pointer-events-none absolute inset-y-0 left-0 w-0.5 origin-top scale-y-0 bg-gradient-to-b from-indigo-500 to-violet-500" aria-hidden="true"></div>
     {items.map((job, i) => (
       <li class="stagger-item relative" style={`--stagger-index: ${i}`}>
-        <span class="absolute -left-[29px] top-1 h-3 w-3 rounded-full bg-gradient-to-b from-indigo-500 to-violet-500 ring-4 ring-white dark:ring-slate-900"></span>
+        <span class="absolute -left-[29px] top-1 z-10 h-3 w-3 rounded-full bg-gradient-to-b from-indigo-500 to-violet-500 ring-4 ring-white dark:ring-slate-900"></span>
         <p class="text-sm text-slate-400 dark:text-slate-500">{job.period} · {job.location}</p>
         <p class="font-semibold text-slate-900 dark:text-slate-100">
           {job.role} —{' '}
@@ -46,3 +48,28 @@ const { title, items } = Astro.props;
     ))}
   </ol>
 </section>
+
+<script>
+  const track = document.getElementById('experience-timeline');
+  const fill = document.getElementById('experience-timeline-fill');
+
+  if (track && fill) {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      fill.style.transform = 'scaleY(1)';
+    } else {
+      const updateFill = () => {
+        const rect = track.getBoundingClientRect();
+        const vh = window.innerHeight;
+        const start = vh * 0.8;
+        const end = vh * 0.3;
+        const total = rect.height + (start - end);
+        const scrolled = start - rect.top;
+        const progress = Math.min(Math.max(scrolled / total, 0), 1);
+        fill.style.transform = `scaleY(${progress})`;
+      };
+      window.addEventListener('scroll', updateFill, { passive: true });
+      window.addEventListener('resize', updateFill);
+      updateFill();
+    }
+  }
+</script>
