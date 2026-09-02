@@ -1,6 +1,6 @@
 {
   "name": "cv-personal",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "",
   "packageManager": "pnpm@9.0.0",
   "scripts": {
