@@ -113,6 +113,17 @@ const imageUrl = `${SITE_URL}${OG_IMAGE_PATH}`;
           { rootMargin: '-45% 0px -45% 0px' },
         );
         sections.forEach((section) => navObserver.observe(section));
+
+        const lastSection = sections[sections.length - 1];
+        const checkAtBottom = () => {
+          if (Date.now() < suppressObserverUntil) return;
+          const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
+          if (atBottom) {
+            setActiveLink(lastSection.id);
+          }
+        };
+        window.addEventListener('scroll', checkAtBottom, { passive: true });
+        checkAtBottom();
       }
 
       const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
