@@ -67,18 +67,44 @@ const imageUrl = `${SITE_URL}${OG_IMAGE_PATH}`;
         .map((link) => document.getElementById(link.getAttribute('href')!.slice(1)))
         .filter((section): section is HTMLElement => section !== null);
 
+      const navIndicator = document.getElementById('nav-indicator');
+
+      const positionNavIndicator = (link: HTMLAnchorElement | undefined) => {
+        if (!navIndicator || !link) return;
+        navIndicator.style.opacity = '1';
+        navIndicator.style.width = `${link.offsetWidth}px`;
+        navIndicator.style.left = `${link.offsetLeft}px`;
+        navIndicator.style.top = `${link.offsetTop + link.offsetHeight + 2}px`;
+      };
+
       const setActiveLink = (id: string | null) => {
+        let activeLink: HTMLAnchorElement | undefined;
         for (const link of navLinks) {
           const isActive = link.getAttribute('href') === `#${id}`;
           link.classList.toggle('text-indigo-600', isActive);
           link.classList.toggle('dark:text-indigo-400', isActive);
           link.classList.toggle('font-semibold', isActive);
+          if (isActive) activeLink = link;
         }
+        positionNavIndicator(activeLink);
       };
+
+      window.addEventListener('resize', () => {
+        positionNavIndicator(navLinks.find((link) => link.classList.contains('font-semibold')));
+      });
+
+      let suppressObserverUntil = 0;
+      navLinks.forEach((link) => {
+        link.addEventListener('click', () => {
+          setActiveLink(link.getAttribute('href')!.slice(1));
+          suppressObserverUntil = Date.now() + 700;
+        });
+      });
 
       if (sections.length > 0) {
         const navObserver = new IntersectionObserver(
           (entries) => {
+            if (Date.now() < suppressObserverUntil) return;
             const visible = entries.filter((entry) => entry.isIntersecting);
             if (visible.length > 0) {
               setActiveLink(visible[0].target.id);
