@@ -33,6 +33,7 @@ const educationEntry = z.object({
 const languageEntry = z.object({
   name: z.string(),
   level: z.string(),
+  levelValue: z.number().min(1).max(5),
   code: z.enum(['es', 'en', 'ca', 'pt', 'fr', 'de']).optional(),
 });
 
