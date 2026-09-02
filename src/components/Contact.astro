@@ -17,24 +17,39 @@ const { title, contact, cloudflareUrl, githubPagesUrl, githubActivity, gitlabAct
 const stripProtocol = (url: string) => url.replace(/^https?:\/\//, '').replace(/\/$/, '');
 
 const links = [
-  { href: `mailto:${contact.email}`, icon: 'mail' as const, label: contact.email, external: false },
   { href: contact.linkedin, icon: 'linkedin' as const, label: 'LinkedIn', external: true },
   { href: contact.github, icon: 'github' as const, label: 'GitHub', external: true },
   { href: contact.stackoverflow, icon: 'stackoverflow' as const, label: 'Stack Overflow', external: true },
   { href: cloudflareUrl, icon: 'globe' as const, label: stripProtocol(cloudflareUrl), external: true },
   { href: githubPagesUrl, icon: 'globe' as const, label: stripProtocol(githubPagesUrl), external: true },
 ];
+
+const chipClass =
+  'inline-flex items-center gap-1.5 rounded-full bg-indigo-50 px-3 py-1.5 text-sm text-indigo-700 hover:-translate-y-0.5 hover:scale-105 hover:bg-indigo-100 hover:shadow-md dark:bg-indigo-950/50 dark:text-indigo-300 dark:hover:bg-indigo-900/60';
 ---
 <section id="contact" class="mx-auto max-w-2xl px-6 py-10">
   <h2 class="mb-4 flex items-center gap-3 text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-100">
     <SectionIcon name="mail" />
     {title}
   </h2>
-  <ul class="flex flex-wrap gap-4 text-slate-700 dark:text-slate-300">
-    {links.map((link) => (
-      <li>
+  <ul class="flex flex-wrap gap-2 text-slate-700 dark:text-slate-300">
+    <li class="stagger-item" style="--stagger-index: 0">
+      <button type="button" id="copy-email-btn" data-email={contact.email} class:list={[chipClass, 'cursor-pointer']}>
+        <span class="relative inline-flex h-4 w-4 shrink-0">
+          <span id="copy-email-icon-mail" class="absolute inset-0 transition-opacity">
+            <Icon name="mail" class="h-4 w-4" />
+          </span>
+          <span id="copy-email-icon-check" class="absolute inset-0 opacity-0 transition-opacity">
+            <Icon name="check" class="h-4 w-4" />
+          </span>
+        </span>
+        {contact.email}
+      </button>
+    </li>
+    {links.map((link, i) => (
+      <li class="stagger-item" style={`--stagger-index: ${i + 1}`}>
         <a
-          class="inline-flex items-center gap-1.5 text-indigo-600 hover:text-indigo-700 dark:text-indigo-400 dark:hover:text-indigo-300"
+          class={chipClass}
           href={link.href}
           {...(link.external ? { target: '_blank', rel: 'noopener' } : {})}
         >
@@ -55,3 +70,34 @@ const links = [
     </p>
   </div>
 </section>
+
+<script>
+  const btn = document.getElementById('copy-email-btn');
+  const mailIcon = document.getElementById('copy-email-icon-mail');
+  const checkIcon = document.getElementById('copy-email-icon-check');
+
+  if (btn && mailIcon && checkIcon) {
+    const email = btn.dataset.email ?? '';
+    let timeoutId: number | undefined;
+
+    btn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(email);
+      } catch {
+        window.location.href = `mailto:${email}`;
+        return;
+      }
+
+      mailIcon.classList.add('opacity-0');
+      checkIcon.classList.remove('opacity-0');
+      btn.classList.add('copy-success');
+
+      clearTimeout(timeoutId);
+      timeoutId = window.setTimeout(() => {
+        mailIcon.classList.remove('opacity-0');
+        checkIcon.classList.add('opacity-0');
+        btn.classList.remove('copy-success');
+      }, 1500);
+    });
+  }
+</script>

@@ -56,6 +56,16 @@
   }
 }
 
+#copy-email-btn.copy-success {
+  background-color: rgb(240 253 244);
+  color: rgb(21 128 61);
+}
+
+.dark #copy-email-btn.copy-success {
+  background-color: rgb(5 46 22 / 0.5);
+  color: rgb(134 239 172);
+}
+
 @media print {
   .no-print {
     display: none !important;
