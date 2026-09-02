@@ -67,6 +67,11 @@
 }
 
 @media print {
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
   .no-print {
     display: none !important;
   }
@@ -93,5 +98,13 @@
   .stagger-item {
     opacity: 1 !important;
     translate: none !important;
+  }
+
+  .stagger-item.rounded-xl {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .space-y-3 > :not([hidden]) ~ :not([hidden]) {
+    margin-top: 0.4rem;
   }
 }
