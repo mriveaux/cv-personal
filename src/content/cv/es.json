@@ -84,8 +84,8 @@
     { "institution": "Universidad de las Ciencias Informáticas (UCI)", "url": "https://www.uci.cu", "degree": "Ingeniero en Ciencias Informáticas", "period": "2007 – 2012" }
   ],
   "certifications": [
-    { "name": "Claude 101", "issuer": "Claude Academy", "date": "5 de septiembre de 2026", "url": "https://academy.claude.com/verify/ebdab8718b8e9801f54fa53ca4cecf5f", "badgeImage": "claude-101.png" },
-    { "name": "Claude Code 101", "issuer": "Claude Academy", "date": "30 de agosto de 2026", "url": "https://academy.claude.com/verify/117ec0c118e884341b58ceb908db115e", "badgeImage": "claude-code-101.png" }
+    { "name": "Claude 101", "issuer": "Claude Academy", "date": "5 de septiembre de 2026", "url": "https://academy.claude.com/verify/ebdab8718b8e9801f54fa53ca4cecf5f", "badgeImage": "claude-101.png", "credentialId": "ebdab8718b8e9801f54fa53ca4cecf5f" },
+    { "name": "Claude Code 101", "issuer": "Claude Academy", "date": "30 de agosto de 2026", "url": "https://academy.claude.com/verify/117ec0c118e884341b58ceb908db115e", "badgeImage": "claude-code-101.png", "credentialId": "117ec0c118e884341b58ceb908db115e" }
   ],
   "patents": [
     {
