@@ -15,7 +15,8 @@ export type IconName =
   | 'language'
   | 'globe'
   | 'activity'
-  | 'check';
+  | 'check'
+  | 'external-link';
 
 interface Props {
   name: IconName;
@@ -45,6 +46,8 @@ const strokeIcons: Partial<Record<IconName, string>> = {
     'M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm0 0c2.25 2.4 3.5 5.5 3.5 9s-1.25 6.6-3.5 9m0-18c-2.25 2.4-3.5 5.5-3.5 9s1.25 6.6 3.5 9M3.25 9h17.5M3.25 15h17.5',
   activity: 'M4 20V10.5M9.5 20V4M15 20v-7M20 20V8.5',
   check: 'M4.5 12.75 9 17.25 19.5 6.75',
+  'external-link':
+    'M13.5 6H18m0 0v4.5M18 6l-7.5 7.5M8.25 6H6a1.5 1.5 0 0 0-1.5 1.5v10.5A1.5 1.5 0 0 0 6 19.5h10.5a1.5 1.5 0 0 0 1.5-1.5v-2.25',
 };
 
 const brandIcons: Partial<Record<IconName, string>> = {

@@ -1,6 +1,7 @@
 ---
 import type { CvData } from '../content/cv.schema';
 import SectionIcon from './SectionIcon.astro';
+import Icon from './Icon.astro';
 
 interface Props {
   title: string;
@@ -22,7 +23,10 @@ const { title, items } = Astro.props;
       >
         <h3 class="font-semibold text-slate-900 dark:text-slate-100">
           {project.url ? (
-            <a href={project.url} class="text-indigo-600 hover:text-indigo-700 dark:text-indigo-400 dark:hover:text-indigo-300" target="_blank" rel="noopener">{project.name}</a>
+            <a href={project.url} class="group/link inline-flex items-center gap-0.5 text-indigo-600 hover:text-indigo-700 dark:text-indigo-400 dark:hover:text-indigo-300" target="_blank" rel="noopener">
+              {project.name}
+              <Icon name="external-link" class="h-3 w-3 opacity-0 transition-opacity group-hover/link:opacity-100" />
+            </a>
           ) : (
             project.name
           )}
