@@ -134,4 +134,8 @@
   .space-y-3 > :not([hidden]) ~ :not([hidden]) {
     margin-top: 0.4rem;
   }
+
+  #experience-timeline-fill {
+    transform: scaleY(1) !important;
+  }
 }

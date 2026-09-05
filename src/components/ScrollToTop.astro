@@ -11,6 +11,8 @@ const { label } = Astro.props;
   id="scroll-to-top"
   type="button"
   aria-label={label}
+  aria-hidden="true"
+  tabindex="-1"
   class="no-print pointer-events-none fixed bottom-6 right-6 z-40 flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-r from-indigo-600 to-violet-600 text-white opacity-0 shadow-lg transition-all duration-300 hover:opacity-90 hover:shadow-xl"
 >
   <Icon name="arrow-up" class="h-5 w-5" />
@@ -24,6 +26,8 @@ const { label } = Astro.props;
       const visible = window.scrollY > window.innerHeight * 0.6;
       button.classList.toggle('opacity-0', !visible);
       button.classList.toggle('pointer-events-none', !visible);
+      button.setAttribute('aria-hidden', String(!visible));
+      button.setAttribute('tabindex', visible ? '0' : '-1');
     };
 
     window.addEventListener('scroll', updateVisibility, { passive: true });

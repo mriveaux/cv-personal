@@ -2,16 +2,50 @@
 import '../styles/global.css';
 import { SITE_URL, OG_IMAGE_PATH, OG_IMAGE_WIDTH, OG_IMAGE_HEIGHT } from '../site';
 
+interface HreflangLink {
+  lang: string;
+  href: string;
+}
+
 interface Props {
   lang: string;
   title: string;
   description: string;
   canonicalUrl: string;
   ogLocale: string;
+  hreflangLinks: HreflangLink[];
+  defaultHreflangHref: string;
+  personName: string;
+  personTitle: string;
+  personEmail: string;
+  sameAs: string[];
 }
 
-const { lang, title, description, canonicalUrl, ogLocale } = Astro.props;
+const {
+  lang,
+  title,
+  description,
+  canonicalUrl,
+  ogLocale,
+  hreflangLinks,
+  defaultHreflangHref,
+  personName,
+  personTitle,
+  personEmail,
+  sameAs,
+} = Astro.props;
 const imageUrl = `${SITE_URL}${OG_IMAGE_PATH}`;
+
+const personJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: personName,
+  jobTitle: personTitle,
+  url: canonicalUrl,
+  image: imageUrl,
+  email: `mailto:${personEmail}`,
+  sameAs,
+};
 ---
 <!doctype html>
 <html lang={lang}>
@@ -21,6 +55,10 @@ const imageUrl = `${SITE_URL}${OG_IMAGE_PATH}`;
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalUrl} />
+    {hreflangLinks.map((link) => (
+      <link rel="alternate" hreflang={link.lang} href={link.href} />
+    ))}
+    <link rel="alternate" hreflang="x-default" href={defaultHreflangHref} />
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Miguel Díaz Riveaux" />
@@ -36,6 +74,7 @@ const imageUrl = `${SITE_URL}${OG_IMAGE_PATH}`;
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={imageUrl} />
+    <script type="application/ld+json" set:html={JSON.stringify(personJsonLd)} />
     <script is:inline>
       (function () {
         const stored = localStorage.getItem('theme');

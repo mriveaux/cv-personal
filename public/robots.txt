@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mriveaux.github.io/cv-personal/sitemap.xml
