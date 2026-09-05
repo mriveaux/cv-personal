@@ -75,11 +75,12 @@
     }
   ],
   "featuredProjects": [
-    { "name": "Future Framework", "description": "Plataforma web modular, multiusuari i multientitat per al desenvolupament de solucions de gestió a mida (estructura organitzativa, RRHH, facturació, producció, flota de vehicles).", "url": "https://gesicu.wordpress.com" },
+    { "name": "Future Framework", "description": "Plataforma web modular, multiusuari i multientitat per al desenvolupament de solucions de gestió a mida (estructura organitzativa, RRHH, facturació, producció, flota de vehicles).", "url": "https://gesicu.wordpress.com/future-framework/" },
     { "name": "CMI Perdurit", "description": "Quadre de Comandament Integral per a l'Empresa de Fibrociment Perdurit: alinea l'estratègia de l'empresa amb informes consolidats i desglossats en temps real.", "url": "https://gesicu.wordpress.com/cmi-perdurit/" },
     { "name": "Sistema de gestió Cooperativa TaxiRutero2", "description": "Gestió de la flota de vehicles, el capital humà, les expedicions i la facturació per a una cooperativa de transport a l'Havana.", "url": "" },
     { "name": "SERVELEC", "description": "Lloc web per a la cooperativa SERVELEC, especialitzada en reparació i manteniment de sistemes de pesatge i industrials.", "url": "https://www.servelec.cu" },
-    { "name": "FutureTrans", "description": "Programari per al control de processos de transport, construït sobre Future Framework.", "url": "https://gesicu.wordpress.com/futuretrans/" }
+    { "name": "FutureTrans", "description": "Programari per al control de processos de transport, construït sobre Future Framework.", "url": "https://gesicu.wordpress.com/futuretrans/" },
+    { "name": "Arxiu Digital Acadèmia San Alejandro (SARSA)", "description": "Sistema de gestió d'arxiu i expedients acadèmics, en explotació a l'Escola Nacional de Belles Arts San Alejandro (l'Havana).", "url": "https://gesicu.wordpress.com/sarsa-archivo-san-alejandro/" }
   ],
   "skills": {
     "categories": [

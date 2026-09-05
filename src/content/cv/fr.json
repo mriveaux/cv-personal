@@ -75,11 +75,12 @@
     }
   ],
   "featuredProjects": [
-    { "name": "Future Framework", "description": "Plateforme web modulaire, multi-utilisateur et multi-entité pour le développement de solutions de gestion sur mesure (structure organisationnelle, RH, facturation, production, flotte de véhicules).", "url": "https://gesicu.wordpress.com" },
+    { "name": "Future Framework", "description": "Plateforme web modulaire, multi-utilisateur et multi-entité pour le développement de solutions de gestion sur mesure (structure organisationnelle, RH, facturation, production, flotte de véhicules).", "url": "https://gesicu.wordpress.com/future-framework/" },
     { "name": "CMI Perdurit", "description": "Tableau de bord prospectif pour l'Empresa de Fibrocemento Perdurit : aligne la stratégie de l'entreprise avec des rapports consolidés et détaillés en temps réel.", "url": "https://gesicu.wordpress.com/cmi-perdurit/" },
     { "name": "Système de gestion Cooperativa TaxiRutero2", "description": "Gestion de la flotte de véhicules, du capital humain, des expéditions et de la facturation pour une coopérative de transport à La Havane.", "url": "" },
     { "name": "SERVELEC", "description": "Site web pour la coopérative SERVELEC, spécialisée dans la réparation et l'entretien de systèmes de pesage et industriels.", "url": "https://www.servelec.cu" },
-    { "name": "FutureTrans", "description": "Logiciel de contrôle des processus de transport, construit sur Future Framework.", "url": "https://gesicu.wordpress.com/futuretrans/" }
+    { "name": "FutureTrans", "description": "Logiciel de contrôle des processus de transport, construit sur Future Framework.", "url": "https://gesicu.wordpress.com/futuretrans/" },
+    { "name": "Archives numériques de l'Académie San Alejandro (SARSA)", "description": "Système de gestion d'archives et de dossiers académiques, en exploitation à l'École nationale des beaux-arts San Alejandro (La Havane).", "url": "https://gesicu.wordpress.com/sarsa-archivo-san-alejandro/" }
   ],
   "skills": {
     "categories": [

@@ -75,11 +75,12 @@
     }
   ],
   "featuredProjects": [
-    { "name": "Future Framework", "description": "Modular, multi-user, multi-entity web platform for building custom management solutions (organizational structure, HR, invoicing, production, vehicle fleet).", "url": "https://gesicu.wordpress.com" },
+    { "name": "Future Framework", "description": "Modular, multi-user, multi-entity web platform for building custom management solutions (organizational structure, HR, invoicing, production, vehicle fleet).", "url": "https://gesicu.wordpress.com/future-framework/" },
     { "name": "CMI Perdurit", "description": "Balanced Scorecard for Empresa de Fibrocemento Perdurit: aligns company strategy with real-time consolidated and detailed reporting.", "url": "https://gesicu.wordpress.com/cmi-perdurit/" },
     { "name": "TaxiRutero2 Cooperative Management System", "description": "Vehicle fleet, human capital, dispatch, and billing management for a transportation cooperative in Havana.", "url": "" },
     { "name": "SERVELEC", "description": "Website for the SERVELEC cooperative, specialized in repair and maintenance of weighing and industrial systems.", "url": "https://www.servelec.cu" },
-    { "name": "FutureTrans", "description": "Transportation process control software, built on Future Framework.", "url": "https://gesicu.wordpress.com/futuretrans/" }
+    { "name": "FutureTrans", "description": "Transportation process control software, built on Future Framework.", "url": "https://gesicu.wordpress.com/futuretrans/" },
+    { "name": "San Alejandro Academy Digital Archive (SARSA)", "description": "Academic records and archive management system, in production use at the San Alejandro National Fine Arts School (Havana).", "url": "https://gesicu.wordpress.com/sarsa-archivo-san-alejandro/" }
   ],
   "skills": {
     "categories": [

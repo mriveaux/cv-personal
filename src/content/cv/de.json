@@ -75,11 +75,12 @@
     }
   ],
   "featuredProjects": [
-    { "name": "Future Framework", "description": "Modulare, mandantenfähige Webplattform für die Entwicklung maßgeschneiderter Managementlösungen (Organisationsstruktur, Personalwesen, Rechnungsstellung, Produktion, Fuhrpark).", "url": "https://gesicu.wordpress.com" },
+    { "name": "Future Framework", "description": "Modulare, mandantenfähige Webplattform für die Entwicklung maßgeschneiderter Managementlösungen (Organisationsstruktur, Personalwesen, Rechnungsstellung, Produktion, Fuhrpark).", "url": "https://gesicu.wordpress.com/future-framework/" },
     { "name": "CMI Perdurit", "description": "Balanced Scorecard für die Empresa de Fibrocemento Perdurit: richtet die Unternehmensstrategie an konsolidierten Echtzeit-Berichten aus.", "url": "https://gesicu.wordpress.com/cmi-perdurit/" },
     { "name": "Verwaltungssystem Cooperativa TaxiRutero2", "description": "Verwaltung von Fuhrpark, Personal, Versand und Abrechnung für eine Transportgenossenschaft in Havanna.", "url": "" },
     { "name": "SERVELEC", "description": "Website für die Genossenschaft SERVELEC, spezialisiert auf Reparatur und Wartung von Wäge- und Industriesystemen.", "url": "https://www.servelec.cu" },
-    { "name": "FutureTrans", "description": "Software zur Steuerung von Transportprozessen, aufgebaut auf Future Framework.", "url": "https://gesicu.wordpress.com/futuretrans/" }
+    { "name": "FutureTrans", "description": "Software zur Steuerung von Transportprozessen, aufgebaut auf Future Framework.", "url": "https://gesicu.wordpress.com/futuretrans/" },
+    { "name": "Digitales Archiv der Akademie San Alejandro (SARSA)", "description": "System zur Verwaltung von akademischen Archiven und Akten, im produktiven Einsatz an der Nationalen Kunstakademie San Alejandro (Havanna).", "url": "https://gesicu.wordpress.com/sarsa-archivo-san-alejandro/" }
   ],
   "skills": {
     "categories": [
