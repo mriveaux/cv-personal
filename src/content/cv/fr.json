@@ -111,7 +111,7 @@
   ],
   "languages": [
     { "name": "Espagnol", "level": "Langue maternelle", "levelValue": 4.25, "code": "es" },
-    { "name": "Anglais", "level": "C1", "levelValue": 3.5, "code": "en" },
+    { "name": "Anglais", "level": "C1", "levelValue": 2.75, "code": "en" },
     { "name": "Français", "level": "B1", "levelValue": 1.5, "code": "fr" }
   ],
   "contact": {
