@@ -1,0 +1,36 @@
+---
+import Icon from './Icon.astro';
+
+interface Props {
+  label: string;
+}
+
+const { label } = Astro.props;
+---
+<button
+  id="scroll-to-top"
+  type="button"
+  aria-label={label}
+  class="no-print pointer-events-none fixed bottom-6 right-6 z-40 flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-r from-indigo-600 to-violet-600 text-white opacity-0 shadow-lg transition-all duration-300 hover:opacity-90 hover:shadow-xl"
+>
+  <Icon name="arrow-up" class="h-5 w-5" />
+</button>
+
+<script>
+  const button = document.getElementById('scroll-to-top');
+
+  if (button) {
+    const updateVisibility = () => {
+      const visible = window.scrollY > window.innerHeight * 0.6;
+      button.classList.toggle('opacity-0', !visible);
+      button.classList.toggle('pointer-events-none', !visible);
+    };
+
+    window.addEventListener('scroll', updateVisibility, { passive: true });
+    updateVisibility();
+
+    button.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+</script>

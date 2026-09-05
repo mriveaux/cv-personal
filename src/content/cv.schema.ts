@@ -101,6 +101,7 @@ export const cvSchema = z.object({
     downloadCta: z.string(),
     sectionTitles: navLabels,
     toggleTheme: z.string(),
+    scrollToTop: z.string(),
     githubActivity: z.string(),
     gitlabActivity: z.string(),
     cookieConsent: z.object({

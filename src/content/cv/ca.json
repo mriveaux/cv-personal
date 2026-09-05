@@ -118,6 +118,7 @@
     "nav": { "about": "Sobre mi", "experience": "Experiència", "projects": "Projectes", "skills": "Habilitats", "education": "Educació", "certifications": "Certificacions", "patents": "Patents", "courses": "Cursos", "languages": "Idiomes", "contact": "Contacte" },
     "downloadCta": "Descarregar CV",
     "toggleTheme": "Canviar tema",
+    "scrollToTop": "Tornar amunt",
     "githubActivity": "211 contribucions a GitHub l'últim any",
     "gitlabActivity": "3.753 contribucions històriques a GitLab",
     "cookieConsent": { "message": "Utilitzem cookies analítiques per entendre com s'utilitza aquest lloc. Les acceptes?", "accept": "Acceptar", "reject": "Rebutjar" },

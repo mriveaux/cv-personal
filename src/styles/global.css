@@ -62,6 +62,27 @@
   }
 }
 
+@keyframes avatar-glow-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.35);
+  }
+  50% {
+    box-shadow: 0 0 0 14px rgba(99, 102, 241, 0);
+  }
+}
+
+.avatar-glow:hover {
+  animation: avatar-glow-pulse 1.6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .avatar-glow:hover {
+    animation: none;
+    box-shadow: 0 0 0 6px rgba(99, 102, 241, 0.25);
+  }
+}
+
 #copy-email-btn.copy-success {
   background-color: rgb(240 253 244);
   color: rgb(21 128 61);
