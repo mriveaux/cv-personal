@@ -12,7 +12,10 @@
       "role": "Software Developer",
       "period": "Janvier 2024 – Présent",
       "location": "Madrid, Espagne (hybride)",
-      "highlights": [[{ "text": "Développement de la plateforme de gestion d'espaces et de réservations de Flexibleplaces.", "url": "https://flexibleplaces.fxpsolutions.com" }]]
+      "highlights": [
+        [{ "text": "Développement de la plateforme de gestion d'espaces et de réservations de Flexibleplaces, utilisée par plus de 175 espaces de marques comme Carmila, Ingka et Cushman & Wakefield dans 8 pays (Espagne, Portugal, France, Italie, Chili, Pologne, Suède et Tchéquie).", "url": "https://flexibleplaces.fxpsolutions.com" }],
+        "J'ai automatisé le processus de réservation (leasing) entre marques et emplacements, supprimant la coordination manuelle entre équipes."
+      ]
     },
     {
       "company": "Flexibleplaces",
@@ -30,8 +33,8 @@
       "location": "La Havane, Cuba",
       "highlights": [
         "Développeur logiciel, Gestionnaire de Configuration et Chef du Comité d'Architecture.",
-        "Système de Contrôle des Biens Patrimoniaux pour le Bureau de l'Historien de La Havane.",
-        ["Sites web pour Pesca Caribe, le Registre Central du Commerce de Cuba (RCC), ", { "text": "UPTCER", "url": "https://www.uptcer.gob.cu" }, " et ANTEX."]
+        "Système de Contrôle des Biens Patrimoniaux pour l'ensemble des entités (principalement des musées) du Bureau de l'Historien de La Havane : a automatisé la gestion des prêts, transferts et restaurations pour une équipe de 3 personnes.",
+        ["Conception et livraison de sites web avec WordPress et Laravel pour Pesca Caribe, le Registre Central du Commerce de Cuba (RCC), ", { "text": "UPTCER", "url": "https://www.uptcer.gob.cu" }, " et ANTEX."]
       ]
     },
     {
@@ -41,8 +44,8 @@
       "period": "Février 2016 – Novembre 2022",
       "location": "Cuba",
       "highlights": [
-        "Analyse, conception, modélisation et implémentation de logiciels pour particuliers et entreprises à Cuba.",
-        "Créateur de Future Framework, plateforme web modulaire pour des solutions de gestion sur mesure, enregistrée au CENDA."
+        "CEO et responsable technique d'une équipe allant jusqu'à 5 développeurs indépendants (en commençant à 2), dédiée à l'analyse, la conception et l'implémentation de logiciels de gestion pour particuliers et entreprises à Cuba.",
+        "Créateur de Future Framework, plateforme web modulaire enregistrée au CENDA et utilisée comme base pour au moins 4 systèmes en production : CMI Perdurit, FutureTrans, la gestion de la Cooperativa TaxiRutero2 et les archives numériques de l'Académie San Alejandro (SARSA)."
       ]
     },
     {
@@ -50,7 +53,7 @@
       "role": "Software Developer (temps partiel)",
       "period": "Mars 2020 – Juillet 2021",
       "location": "La Havane, Cuba",
-      "highlights": ["Développement de solutions pour l'amélioration des processus métier."]
+      "highlights": ["Développement d'un système de planification au sein d'une équipe de 7 personnes, visant à améliorer les processus métier."]
     },
     {
       "company": "XETID",
@@ -59,7 +62,8 @@
       "period": "Août 2012 – Août 2016",
       "location": "Cuba",
       "highlights": [
-        "Analyste, architecte et développeur de l'ERP DISTRA (gestion comptable et financière).",
+        "Analyste, architecte et développeur de l'ERP DISTRA (gestion comptable et financière) pour une entreprise de plus de 500 employés ; refonte complète du module de comptabilité générale.",
+        "J'ai créé une calculatrice comptable personnalisée pour résoudre et calculer les états financiers, en implémentant l'algorithme de notation polonaise inversée sur le plan comptable.",
         "Secrétaire du Comité d'Architecture."
       ]
     }
