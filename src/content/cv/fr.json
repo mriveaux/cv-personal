@@ -110,9 +110,9 @@
     { "name": "Comptabilité financière", "provider": "XETID", "year": "2014" }
   ],
   "languages": [
-    { "name": "Espagnol", "level": "Langue maternelle", "levelValue": 5, "code": "es" },
-    { "name": "Anglais", "level": "C1", "levelValue": 4, "code": "en" },
-    { "name": "Français", "level": "B1", "levelValue": 2, "code": "fr" }
+    { "name": "Espagnol", "level": "Langue maternelle", "levelValue": 4.25, "code": "es" },
+    { "name": "Anglais", "level": "C1", "levelValue": 3.5, "code": "en" },
+    { "name": "Français", "level": "B1", "levelValue": 1.5, "code": "fr" }
   ],
   "contact": {
     "email": "mdriveaux2015@gmail.com",

@@ -8,6 +8,14 @@
   }
 }
 
+.lang-dot-partial {
+  background: linear-gradient(90deg, #6366f1 var(--fill, 50%), rgb(226 232 240) var(--fill, 50%));
+}
+
+.dark .lang-dot-partial {
+  background: linear-gradient(90deg, #818cf8 var(--fill, 50%), rgb(51 65 85) var(--fill, 50%));
+}
+
 #scroll-progress {
   position: fixed;
   top: 0;

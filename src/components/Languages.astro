@@ -26,16 +26,22 @@ const { title, items } = Astro.props;
           role="img"
           aria-label={language.level}
         >
-          {Array.from({ length: 5 }).map((_, i) => (
-            <span
-              class:list={[
-                'h-2 w-2 rounded-full transition-colors',
-                i < language.levelValue
-                  ? 'bg-gradient-to-b from-indigo-500 to-violet-500'
-                  : 'bg-slate-200 dark:bg-slate-700',
-              ]}
-            />
-          ))}
+          {Array.from({ length: 5 }).map((_, i) => {
+            const fraction = Math.min(Math.max(language.levelValue - i, 0), 1);
+            const isFull = fraction >= 1;
+            const isPartial = fraction > 0 && fraction < 1;
+            return (
+              <span
+                class:list={[
+                  'h-2.5 w-2.5 rounded-full transition-colors',
+                  isFull && 'bg-gradient-to-b from-indigo-500 to-violet-500',
+                  isPartial && 'lang-dot-partial',
+                  !isFull && !isPartial && 'bg-slate-200 dark:bg-slate-700',
+                ]}
+                style={isPartial ? `--fill: ${fraction * 100}%` : undefined}
+              />
+            );
+          })}
           <span
             aria-hidden="true"
             class="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-md bg-slate-900 px-2 py-1 text-xs font-medium text-white opacity-0 shadow-md transition-opacity duration-150 group-hover:opacity-100 group-focus-visible:opacity-100 dark:bg-slate-700"
