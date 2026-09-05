@@ -77,9 +77,11 @@
   ],
   "skills": {
     "categories": [
-      { "name": "Lenguajes y frameworks", "items": ["Java", "Spring Framework", "C#", "PHP", "Laravel", "Symfony", "Doctrine", "JavaScript", "TypeScript", "Node.js", "NestJS", "jQuery", "ExtJS", "HTML", "CSS/SASS", "Bootstrap", "ASP.NET MVC", "Vue.js", "Angular"] },
-      { "name": "Bases de datos", "items": ["SQL", "MySQL", "PostgreSQL (PL/pgSQL & GIS)", "MongoDB", "SQLite", "NoSQL"] },
-      { "name": "DevOps e infraestructura", "items": ["Docker", "Git", "GitHub", "Linux/Ubuntu", "Apache", "Nginx", "WordPress", "AWS", "Firebase"] },
+      { "name": "Frontend", "items": ["JavaScript", "TypeScript", "Vue.js", "Angular", "jQuery", "ExtJS", "HTML", "CSS/SASS", "Bootstrap", "TailwindCSS"] },
+      { "name": "Backend", "items": ["Java", "Spring Framework", "C#", "ASP.NET MVC", "PHP", "Laravel", "Symfony", "Doctrine", "Node.js", "NestJS"] },
+      { "name": "Bases de datos", "items": ["SQL", "MySQL/MariaDB", "PostgreSQL (PL/pgSQL & GIS)", "MongoDB", "SQLite", "NoSQL"] },
+      { "name": "DevOps e infraestructura", "items": ["Docker", "Git/Subversion", "GitHub", "Linux/Ubuntu", "Apache/Nginx", "WordPress", "AWS", "Google Cloud Platform (GCP)", "Cloudflare", "Firebase"] },
+      { "name": "Analítica web y SEO", "items": ["Google Search Console", "Google Analytics 4 (GA4)", "Google Tag Manager"] },
       { "name": "Arquitectura e integración", "items": ["REST", "SOAP", "SaaS", "ERP"] },
       { "name": "Metodologías y liderazgo", "items": ["Scrum", "Gestión de proyectos", "Liderazgo de equipos de desarrollo", "Análisis y arquitectura de software"] }
     ]
