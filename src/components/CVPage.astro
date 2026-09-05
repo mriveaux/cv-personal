@@ -11,8 +11,6 @@ import Projects from './Projects.astro';
 import Skills from './Skills.astro';
 import Education from './Education.astro';
 import Certifications from './Certifications.astro';
-import Courses from './Courses.astro';
-import Patents from './Patents.astro';
 import Languages from './Languages.astro';
 import Contact from './Contact.astro';
 import Footer from './Footer.astro';
@@ -73,9 +71,14 @@ const sameAs = [cv.contact.linkedin, cv.contact.github, cv.contact.stackoverflow
   <Experience title={cv.ui.sectionTitles.experience} items={cv.experience} />
   <Projects title={cv.ui.sectionTitles.projects} items={cv.featuredProjects} />
   <Education title={cv.ui.sectionTitles.education} items={cv.education} />
-  <Certifications title={cv.ui.sectionTitles.certifications} items={cv.certifications} />
-  <Courses title={cv.ui.sectionTitles.courses} items={cv.courses} />
-  <Patents title={cv.ui.sectionTitles.patents} items={cv.patents} />
+  <Certifications
+    title={cv.ui.sectionTitles.certifications}
+    items={cv.certifications}
+    patents={cv.patents}
+    patentsTitle={cv.ui.sectionTitles.patents}
+    courses={cv.courses}
+    coursesTitle={cv.ui.sectionTitles.courses}
+  />
   <Languages title={cv.ui.sectionTitles.languages} items={cv.languages} />
   <Contact title={cv.ui.sectionTitles.contact} contact={cv.contact} cloudflareUrl={workersUrl} githubPagesUrl={canonicalUrl} githubActivity={cv.ui.githubActivity} gitlabActivity={cv.ui.gitlabActivity} />
   <Footer name={cv.hero.name} />
