@@ -102,6 +102,7 @@ export const cvSchema = z.object({
     sectionTitles: navLabels,
     toggleTheme: z.string(),
     scrollToTop: z.string(),
+    skipToContent: z.string(),
     githubActivity: z.string(),
     gitlabActivity: z.string(),
     cookieConsent: z.object({

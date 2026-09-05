@@ -36,7 +36,7 @@
       "url": "https://www.desoft.cu/es",
       "role": "Senior Software Developer — Especialista B en Ciencias Informáticas",
       "period": "Septiembre 2017 – Enero 2024",
-      "location": "La Habana, Cuba",
+      "location": "La Habana, Cuba (compaginado)",
       "highlights": [
         "Desarrollador de software, Gestor de la Configuración y Jefe del Comité de Arquitectura.",
         "Sistema de Control de Bienes Patrimoniales para todas las entidades (principalmente museos) de la Oficina del Historiador de La Habana: automatizó la gestión de préstamos, traslados y restauraciones para un equipo de 3 personas.",
@@ -48,7 +48,7 @@
       "url": "https://gesicu.wordpress.com",
       "role": "CEO y Freelance Software Engineer",
       "period": "Febrero 2016 – Noviembre 2022",
-      "location": "Cuba",
+      "location": "Cuba (compaginado)",
       "highlights": [
         "CEO y líder técnico de un equipo de hasta 5 desarrolladores autónomos (comenzando con 2), dedicado al análisis, diseño e implementación de software de gestión para personas naturales y jurídicas en Cuba.",
         "Creador de Future Framework, plataforma web modular registrada en el CENDA y usada como base para al menos 4 sistemas en producción: CMI Perdurit, FutureTrans, la gestión de la Cooperativa TaxiRutero2 y el archivo digital de la Academia San Alejandro (SARSA)."
@@ -58,7 +58,7 @@
       "company": "Nemexo",
       "role": "Software Developer (jornada parcial)",
       "period": "Marzo 2020 – Julio 2021",
-      "location": "La Habana, Cuba",
+      "location": "La Habana, Cuba (compaginado)",
       "highlights": ["Desarrollo de un sistema de planificación como parte de un equipo de 7 personas, orientado a mejorar procesos de negocio."]
     },
     {
@@ -76,10 +76,10 @@
   ],
   "featuredProjects": [
     { "name": "Future Framework", "description": "Plataforma web modular, multiusuario y multientidad para el desarrollo de soluciones de gestión a medida (estructura organizativa, RRHH, facturación, producción, flota de vehículos).", "url": "https://gesicu.wordpress.com" },
-    { "name": "CMI Perdurit", "description": "Cuadro de Mando Integral para la Empresa de Fibrocemento Perdurit: alinea la estrategia de la empresa con reportes consolidados y desglosados en tiempo real.", "url": "" },
+    { "name": "CMI Perdurit", "description": "Cuadro de Mando Integral para la Empresa de Fibrocemento Perdurit: alinea la estrategia de la empresa con reportes consolidados y desglosados en tiempo real.", "url": "https://gesicu.wordpress.com/cmi-perdurit/" },
     { "name": "Sistema de gestión Cooperativa TaxiRutero2", "description": "Gestión de la flota de vehículos, el capital humano, las expediciones y la facturación para una cooperativa de transporte en La Habana.", "url": "" },
     { "name": "SERVELEC", "description": "Sitio web para la cooperativa SERVELEC, especializada en reparación y mantenimiento de sistemas de pesaje e industriales.", "url": "https://www.servelec.cu" },
-    { "name": "FutureTrans", "description": "Software para el control de procesos de transporte, construido sobre Future Framework.", "url": "" }
+    { "name": "FutureTrans", "description": "Software para el control de procesos de transporte, construido sobre Future Framework.", "url": "https://gesicu.wordpress.com/futuretrans/" }
   ],
   "skills": {
     "categories": [
@@ -131,6 +131,7 @@
     "downloadCta": "Descargar CV",
     "toggleTheme": "Cambiar tema",
     "scrollToTop": "Volver arriba",
+    "skipToContent": "Saltar al contenido",
     "githubActivity": "211 contribuciones en GitHub en el último año",
     "gitlabActivity": "3.753 contribuciones históricas en GitLab",
     "cookieConsent": { "message": "Usamos cookies analíticas para entender cómo se usa este sitio. ¿Las aceptas?", "accept": "Aceptar", "reject": "Rechazar" },

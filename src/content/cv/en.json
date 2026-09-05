@@ -36,7 +36,7 @@
       "url": "https://www.desoft.cu/es",
       "role": "Senior Software Developer — Grade B Computer Science Specialist",
       "period": "September 2017 – January 2024",
-      "location": "Havana, Cuba",
+      "location": "Havana, Cuba (concurrent)",
       "highlights": [
         "Software developer, Configuration Manager, and Head of the Architecture Committee.",
         "Asset Management Control System for every entity (mainly museums) under the Office of the Historian of Havana: automated loan, transfer, and restoration workflows for a team of 3.",
@@ -48,7 +48,7 @@
       "url": "https://gesicu.wordpress.com",
       "role": "CEO and Freelance Software Engineer",
       "period": "February 2016 – November 2022",
-      "location": "Cuba",
+      "location": "Cuba (concurrent)",
       "highlights": [
         "CEO and technical lead of a team of up to 5 freelance developers (starting with 2), focused on analysis, design, and implementation of management software for individuals and businesses in Cuba.",
         "Creator of Future Framework, a modular web platform registered with CENDA and used as the base for at least 4 production systems: CMI Perdurit, FutureTrans, the Cooperativa TaxiRutero2 management system, and the digital archive of the San Alejandro Academy (SARSA)."
@@ -58,7 +58,7 @@
       "company": "Nemexo",
       "role": "Software Developer (part-time)",
       "period": "March 2020 – July 2021",
-      "location": "Havana, Cuba",
+      "location": "Havana, Cuba (concurrent)",
       "highlights": ["Developed a planning system as part of a team of 7, aimed at improving business processes."]
     },
     {
@@ -76,10 +76,10 @@
   ],
   "featuredProjects": [
     { "name": "Future Framework", "description": "Modular, multi-user, multi-entity web platform for building custom management solutions (organizational structure, HR, invoicing, production, vehicle fleet).", "url": "https://gesicu.wordpress.com" },
-    { "name": "CMI Perdurit", "description": "Balanced Scorecard for Empresa de Fibrocemento Perdurit: aligns company strategy with real-time consolidated and detailed reporting.", "url": "" },
+    { "name": "CMI Perdurit", "description": "Balanced Scorecard for Empresa de Fibrocemento Perdurit: aligns company strategy with real-time consolidated and detailed reporting.", "url": "https://gesicu.wordpress.com/cmi-perdurit/" },
     { "name": "TaxiRutero2 Cooperative Management System", "description": "Vehicle fleet, human capital, dispatch, and billing management for a transportation cooperative in Havana.", "url": "" },
     { "name": "SERVELEC", "description": "Website for the SERVELEC cooperative, specialized in repair and maintenance of weighing and industrial systems.", "url": "https://www.servelec.cu" },
-    { "name": "FutureTrans", "description": "Transportation process control software, built on Future Framework.", "url": "" }
+    { "name": "FutureTrans", "description": "Transportation process control software, built on Future Framework.", "url": "https://gesicu.wordpress.com/futuretrans/" }
   ],
   "skills": {
     "categories": [
@@ -131,6 +131,7 @@
     "downloadCta": "Download CV",
     "toggleTheme": "Toggle theme",
     "scrollToTop": "Back to top",
+    "skipToContent": "Skip to content",
     "githubActivity": "211 GitHub contributions in the past year",
     "gitlabActivity": "3,753 historical GitLab contributions",
     "cookieConsent": { "message": "We use analytics cookies to understand how this site is used. Do you accept them?", "accept": "Accept", "reject": "Reject" },

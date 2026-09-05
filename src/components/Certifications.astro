@@ -35,7 +35,7 @@ const { title, items, patents, patentsTitle, courses, coursesTitle } = Astro.pro
             ) : ( cert.name )}
           </p>
           <p class="text-slate-600 dark:text-slate-400">{cert.issuer} · {cert.date}</p>
-          {cert.credentialId && <p class="text-xs text-slate-400 dark:text-slate-500">ID: {cert.credentialId}</p>}
+          {cert.credentialId && <p class="text-xs text-slate-500 dark:text-slate-400">ID: {cert.credentialId}</p>}
         </div>
         {cert.badgeImage && (
           <a

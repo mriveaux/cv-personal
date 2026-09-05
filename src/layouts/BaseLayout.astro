@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import { SITE_URL, OG_IMAGE_PATH, OG_IMAGE_WIDTH, OG_IMAGE_HEIGHT } from '../site';
+import type { CvData } from '../content/cv.schema';
 
 interface HreflangLink {
   lang: string;
@@ -19,6 +20,9 @@ interface Props {
   personTitle: string;
   personEmail: string;
   sameAs: string[];
+  worksFor: { name: string; url?: string };
+  certifications: CvData['certifications'];
+  skipToContentLabel: string;
 }
 
 const {
@@ -33,6 +37,9 @@ const {
   personTitle,
   personEmail,
   sameAs,
+  worksFor,
+  certifications,
+  skipToContentLabel,
 } = Astro.props;
 const imageUrl = `${SITE_URL}${OG_IMAGE_PATH}`;
 
@@ -45,6 +52,18 @@ const personJsonLd = {
   image: imageUrl,
   email: `mailto:${personEmail}`,
   sameAs,
+  worksFor: {
+    '@type': 'Organization',
+    name: worksFor.name,
+    ...(worksFor.url && { url: worksFor.url }),
+  },
+  hasCredential: certifications.map((cert) => ({
+    '@type': 'EducationalOccupationalCredential',
+    name: cert.name,
+    credentialCategory: 'certificate',
+    ...(cert.url && { url: cert.url }),
+    ...(cert.issuer && { recognizedBy: { '@type': 'Organization', name: cert.issuer } }),
+  })),
 };
 ---
 <!doctype html>
@@ -86,6 +105,12 @@ const personJsonLd = {
     </script>
   </head>
   <body class="bg-white text-slate-900 antialiased transition-colors dark:bg-slate-900 dark:text-slate-100">
+    <a
+      href="#main-content"
+      class="no-print sr-only z-50 rounded-md bg-indigo-600 px-4 py-2 text-white focus:not-sr-only focus:fixed focus:left-4 focus:top-4"
+    >
+      {skipToContentLabel}
+    </a>
     <div id="scroll-progress" class="no-print"></div>
     <slot />
     <script>

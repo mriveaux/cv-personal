@@ -50,6 +50,8 @@ const ogLocale = OG_LOCALES[lang];
 const hreflangLinks = LANGS.map((l) => ({ lang: l, href: `${SITE_URL}${getLocalizedPath(l)}` }));
 const defaultHreflangHref = `${SITE_URL}${getLocalizedPath('es')}`;
 const sameAs = [cv.contact.linkedin, cv.contact.github, cv.contact.stackoverflow].filter(Boolean);
+const currentJob = cv.experience[0];
+const worksFor = { name: currentJob.company, url: currentJob.url };
 ---
 <BaseLayout
   lang={lang}
@@ -63,24 +65,29 @@ const sameAs = [cv.contact.linkedin, cv.contact.github, cv.contact.stackoverflow
   personTitle={cv.hero.title}
   personEmail={cv.contact.email}
   sameAs={sameAs}
+  worksFor={worksFor}
+  certifications={cv.certifications}
+  skipToContentLabel={cv.ui.skipToContent}
 >
   <Header lang={lang} ui={cv.ui} name={cv.hero.name} />
-  <Hero hero={cv.hero} />
-  <About title={cv.ui.sectionTitles.about} about={cv.about} />
-  <Skills title={cv.ui.sectionTitles.skills} skills={cv.skills} />
-  <Experience title={cv.ui.sectionTitles.experience} items={cv.experience} />
-  <Projects title={cv.ui.sectionTitles.projects} items={cv.featuredProjects} />
-  <Education title={cv.ui.sectionTitles.education} items={cv.education} />
-  <Certifications
-    title={cv.ui.sectionTitles.certifications}
-    items={cv.certifications}
-    patents={cv.patents}
-    patentsTitle={cv.ui.sectionTitles.patents}
-    courses={cv.courses}
-    coursesTitle={cv.ui.sectionTitles.courses}
-  />
-  <Languages title={cv.ui.sectionTitles.languages} items={cv.languages} />
-  <Contact title={cv.ui.sectionTitles.contact} contact={cv.contact} cloudflareUrl={workersUrl} githubPagesUrl={canonicalUrl} githubActivity={cv.ui.githubActivity} gitlabActivity={cv.ui.gitlabActivity} />
+  <main id="main-content">
+    <Hero hero={cv.hero} />
+    <About title={cv.ui.sectionTitles.about} about={cv.about} />
+    <Skills title={cv.ui.sectionTitles.skills} skills={cv.skills} />
+    <Experience title={cv.ui.sectionTitles.experience} items={cv.experience} />
+    <Projects title={cv.ui.sectionTitles.projects} items={cv.featuredProjects} />
+    <Education title={cv.ui.sectionTitles.education} items={cv.education} />
+    <Certifications
+      title={cv.ui.sectionTitles.certifications}
+      items={cv.certifications}
+      patents={cv.patents}
+      patentsTitle={cv.ui.sectionTitles.patents}
+      courses={cv.courses}
+      coursesTitle={cv.ui.sectionTitles.courses}
+    />
+    <Languages title={cv.ui.sectionTitles.languages} items={cv.languages} />
+    <Contact title={cv.ui.sectionTitles.contact} contact={cv.contact} cloudflareUrl={workersUrl} githubPagesUrl={canonicalUrl} githubActivity={cv.ui.githubActivity} gitlabActivity={cv.ui.gitlabActivity} />
+  </main>
   <Footer name={cv.hero.name} />
   <CookieConsent ui={cv.ui.cookieConsent} />
   <ScrollToTop label={cv.ui.scrollToTop} />

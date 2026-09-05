@@ -36,7 +36,7 @@
       "url": "https://www.desoft.cu/es",
       "role": "Senior Software Developer — Spécialiste B en Sciences Informatiques",
       "period": "Septembre 2017 – Janvier 2024",
-      "location": "La Havane, Cuba",
+      "location": "La Havane, Cuba (cumulé)",
       "highlights": [
         "Développeur logiciel, Gestionnaire de Configuration et Chef du Comité d'Architecture.",
         "Système de Contrôle des Biens Patrimoniaux pour l'ensemble des entités (principalement des musées) du Bureau de l'Historien de La Havane : a automatisé la gestion des prêts, transferts et restaurations pour une équipe de 3 personnes.",
@@ -48,7 +48,7 @@
       "url": "https://gesicu.wordpress.com",
       "role": "CEO et Freelance Software Engineer",
       "period": "Février 2016 – Novembre 2022",
-      "location": "Cuba",
+      "location": "Cuba (cumulé)",
       "highlights": [
         "CEO et responsable technique d'une équipe allant jusqu'à 5 développeurs indépendants (en commençant à 2), dédiée à l'analyse, la conception et l'implémentation de logiciels de gestion pour particuliers et entreprises à Cuba.",
         "Créateur de Future Framework, plateforme web modulaire enregistrée au CENDA et utilisée comme base pour au moins 4 systèmes en production : CMI Perdurit, FutureTrans, la gestion de la Cooperativa TaxiRutero2 et les archives numériques de l'Académie San Alejandro (SARSA)."
@@ -58,7 +58,7 @@
       "company": "Nemexo",
       "role": "Software Developer (temps partiel)",
       "period": "Mars 2020 – Juillet 2021",
-      "location": "La Havane, Cuba",
+      "location": "La Havane, Cuba (cumulé)",
       "highlights": ["Développement d'un système de planification au sein d'une équipe de 7 personnes, visant à améliorer les processus métier."]
     },
     {
@@ -76,10 +76,10 @@
   ],
   "featuredProjects": [
     { "name": "Future Framework", "description": "Plateforme web modulaire, multi-utilisateur et multi-entité pour le développement de solutions de gestion sur mesure (structure organisationnelle, RH, facturation, production, flotte de véhicules).", "url": "https://gesicu.wordpress.com" },
-    { "name": "CMI Perdurit", "description": "Tableau de bord prospectif pour l'Empresa de Fibrocemento Perdurit : aligne la stratégie de l'entreprise avec des rapports consolidés et détaillés en temps réel.", "url": "" },
+    { "name": "CMI Perdurit", "description": "Tableau de bord prospectif pour l'Empresa de Fibrocemento Perdurit : aligne la stratégie de l'entreprise avec des rapports consolidés et détaillés en temps réel.", "url": "https://gesicu.wordpress.com/cmi-perdurit/" },
     { "name": "Système de gestion Cooperativa TaxiRutero2", "description": "Gestion de la flotte de véhicules, du capital humain, des expéditions et de la facturation pour une coopérative de transport à La Havane.", "url": "" },
     { "name": "SERVELEC", "description": "Site web pour la coopérative SERVELEC, spécialisée dans la réparation et l'entretien de systèmes de pesage et industriels.", "url": "https://www.servelec.cu" },
-    { "name": "FutureTrans", "description": "Logiciel de contrôle des processus de transport, construit sur Future Framework.", "url": "" }
+    { "name": "FutureTrans", "description": "Logiciel de contrôle des processus de transport, construit sur Future Framework.", "url": "https://gesicu.wordpress.com/futuretrans/" }
   ],
   "skills": {
     "categories": [
@@ -131,6 +131,7 @@
     "downloadCta": "Télécharger le CV",
     "toggleTheme": "Changer de thème",
     "scrollToTop": "Retour en haut",
+    "skipToContent": "Passer au contenu",
     "githubActivity": "211 contributions GitHub au cours de la dernière année",
     "gitlabActivity": "3 753 contributions historiques sur GitLab",
     "cookieConsent": { "message": "Nous utilisons des cookies analytiques pour comprendre l'utilisation de ce site. Les acceptez-vous ?", "accept": "Accepter", "reject": "Refuser" },
