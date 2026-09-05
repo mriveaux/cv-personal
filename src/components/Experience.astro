@@ -44,7 +44,13 @@ const { title, items } = Astro.props;
                     ) : (
                       <a href={part.url} class="group/link inline-flex items-center gap-0.5 text-indigo-600 hover:text-indigo-700 dark:text-indigo-400 dark:hover:text-indigo-300" target="_blank" rel="noopener">
                         {part.text}
-                        <Icon name="external-link" class="h-3 w-3 opacity-0 transition-opacity group-hover/link:opacity-100 print:hidden" />
+                        <Icon
+                          name="external-link"
+                          class:list={[
+                            'h-3 w-3 transition-opacity print:hidden',
+                            highlight.length === 1 ? 'opacity-100' : 'opacity-0 group-hover/link:opacity-100',
+                          ]}
+                        />
                       </a>
                     ),
                   )}

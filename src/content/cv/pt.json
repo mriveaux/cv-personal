@@ -14,7 +14,8 @@
       "location": "Madrid, Espanha (híbrido)",
       "highlights": [
         [{ "text": "Desenvolvimento da plataforma de gestão de espaços e reservas da Flexibleplaces, usada por mais de 175 espaços de marcas como Carmila, Ingka e Cushman & Wakefield em 8 países (Espanha, Portugal, França, Itália, Chile, Polônia, Suécia e Chéquia).", "url": "https://flexibleplaces.fxpsolutions.com" }],
-        "Automatizei o processo de reservas (leasing) entre marcas e localizações, eliminando a coordenação manual entre equipes."
+        "Automatizei o processo de reservas (leasing) entre marcas e localizações, eliminando a coordenação manual entre equipes.",
+        ["Gerenciei a analítica web e o SEO do site ", { "text": "fxpsolutions.com", "url": "https://fxpsolutions.com/es/" }, " e da plataforma ", { "text": "flexibleplaces.fxpsolutions.com", "url": "https://flexibleplaces.fxpsolutions.com" }, "."]
       ]
     },
     {
@@ -23,7 +24,12 @@
       "role": "Software Developer (freelance)",
       "period": "Junho 2022 – Janeiro 2024",
       "location": "Remoto",
-      "highlights": ["Colaboração remota como desenvolvedor independente antes de ingressar em tempo integral."]
+      "highlights": [
+        "Colaboração remota como desenvolvedor independente antes de ingressar em tempo integral.",
+        "Redesenhei o mapa geoespacial (Mapbox) de espaços e localizações, incorporando busca por país e cidade, e a contagem de espaços em tempo real.",
+        "Implementei a geração de contratos de reserva com assinatura digital entre clientes e proprietários dos espaços.",
+        "Habilitei a criação de múltiplos perfis fiscais por empresa para operar em diferentes países e moedas."
+      ]
     },
     {
       "company": "DESOFT",
